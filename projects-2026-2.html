@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Projects 2026 | Technovation Girls Kyrgyzstan</title>
+  <meta name="description" content="Pitch videos and descriptions of projects by 60 teams of Technovation Girls Kyrgyzstan, season 2025–2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #ff6b2b;
+      --orange-soft: #fff0e8;
+      --blue: #1a7fd4;
+      --blue-dark: #0d5fa0;
+      --blue-ink: #12263a;
+      --violet: #6952d7;
+      --turquoise: #21b7b6;
+      --yellow: #ffb800;
+      --white: #ffffff;
+      --gray: #5e7a8a;
+      --gray-light: #f4f8fc;
+      --line: rgba(18, 38, 58, 0.1);
+      --shadow: 0 22px 60px rgba(13, 95, 160, 0.13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--blue-ink); background: var(--white); font-family: "Manrope", sans-serif; overflow-x: hidden; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Montserrat", sans-serif; }
+    body.lang-en .ru { display: none !important; }
+    body.lang-ru .en { display: none !important; }
+
+    .topbar {
+      position: fixed; inset: 0 0 auto; z-index: 100; min-height: 70px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 10px clamp(18px, 4vw, 54px);
+      background: rgba(255,255,255,0.94); backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(26,127,212,0.12);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-badge {
+      width: 40px; height: 40px; border-radius: 12px; flex: 0 0 auto;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      display: grid; place-items: center; color: #fff;
+      font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 17px;
+    }
+    .brand b { font-family: "Montserrat", sans-serif; font-size: 15px; line-height: 1.15; display: block; }
+    .brand small { color: var(--gray); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .navlinks { display: flex; align-items: center; gap: 18px; font-size: 13px; font-weight: 800; color: #375164; }
+    .navlinks a { text-decoration: none; white-space: nowrap; }
+    .navlinks a:hover { color: var(--blue); }
+    .lang-toggle { display: grid; grid-template-columns: 1fr 1fr; width: 88px; padding: 3px; background: var(--gray-light); border: 1px solid var(--line); border-radius: 999px; }
+    .lang-toggle button { border: 0; border-radius: 999px; background: transparent; color: var(--gray); padding: 7px 0; font-size: 12px; font-weight: 800; cursor: pointer; font-family: inherit; }
+    .lang-toggle button.active { background: var(--blue-ink); color: #fff; }
+    @media (max-width: 900px) { .navlinks { display: none; } }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 40px); }
+    .eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--blue-dark);
+      background: #e8f4ff; border-radius: 999px; padding: 7px 14px; margin-bottom: 16px;
+    }
+
+    /* hero */
+    .hero {
+      padding: calc(70px + clamp(48px, 7vw, 80px)) 0 clamp(44px, 6vw, 70px);
+      background:
+        radial-gradient(680px 340px at 90% 0%, rgba(255,107,43,0.10), transparent 65%),
+        radial-gradient(560px 300px at 0% 30%, rgba(105,82,215,0.10), transparent 60%),
+        var(--gray-light);
+    }
+    .hero h1 { font-size: clamp(28px, 4.4vw, 50px); font-weight: 900; line-height: 1.1; margin: 0 0 16px; max-width: 860px; }
+    .hero h1 .accent { color: var(--orange); }
+    .hero p { color: var(--gray); font-size: clamp(15px, 1.6vw, 17.5px); line-height: 1.65; max-width: 780px; margin: 0 0 26px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hbadge { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-size: 13.5px; font-weight: 800; }
+    .hbadge b { color: var(--blue-dark); font-family: "Montserrat", sans-serif; }
+
+    /* theme navigation */
+    .theme-nav { padding: clamp(30px, 4vw, 44px) 0; border-bottom: 1px solid var(--line); }
+    .theme-nav h2 { font-size: 15px; font-weight: 800; margin: 0 0 14px; color: var(--gray); text-transform: uppercase; letter-spacing: .1em; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      text-decoration: none; font-size: 13.5px; font-weight: 800;
+      border-radius: 999px; padding: 10px 18px; color: #fff; transition: transform .15s ease;
+    }
+    .chip:hover { transform: translateY(-2px); }
+    .chip.c1 { background: var(--violet); }
+    .chip.c2 { background: var(--blue); }
+    .chip.c3 { background: var(--turquoise); }
+    .chip.c4 { background: var(--orange); }
+    .chip.c5 { background: var(--blue-dark); }
+    .chip.c6 { background: #158080; }
+    .chip.c7 { background: var(--yellow); color: var(--blue-ink); }
+
+    /* theme sections */
+    .theme { padding: clamp(44px, 6vw, 72px) 0; }
+    .theme:nth-of-type(even) { background: var(--gray-light); }
+    .theme h2 { font-size: clamp(22px, 3vw, 32px); font-weight: 900; margin: 0 0 8px; }
+    .theme .theme-mark { display: inline-block; width: 46px; height: 6px; border-radius: 999px; margin-bottom: 14px; }
+    .theme-sub { color: var(--gray); font-size: 14.5px; margin: 0 0 30px; max-width: 720px; line-height: 1.6; }
+
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 22px;
+      padding: clamp(20px, 2.6vw, 28px); display: flex; flex-direction: column; gap: 12px;
+      box-shadow: 0 8px 26px rgba(13,95,160,0.06);
+    }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .team { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 17px; }
+    .team span { display: block; font-family: "Manrope", sans-serif; font-weight: 700; font-size: 12.5px; color: var(--gray); margin-top: 3px; }
+    .division { flex: 0 0 auto; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 5px 12px; }
+    .division.beginner { background: #eaf8f4; color: #167365; }
+    .division.junior { background: #e8f4ff; color: var(--blue-dark); }
+    .division.senior { background: var(--orange-soft); color: #c94a00; }
+    .appname { font-size: 15px; font-weight: 800; color: var(--violet); }
+    .card p { margin: 0; color: #476274; font-size: 14px; line-height: 1.65; }
+    .people { border-top: 1px dashed var(--line); padding-top: 12px; font-size: 13px; color: var(--gray); line-height: 1.7; }
+    .people b { color: var(--blue-ink); }
+    .video-link { align-self: flex-start; text-decoration: none; font-weight: 800; font-size: 13.5px; color: var(--blue-dark); background: #e8f4ff; border-radius: 999px; padding: 9px 16px; }
+    .video-link:hover { background: var(--blue); color: #fff; }
+
+    /* editable placeholder notice */
+    .notice {
+      margin: 26px auto 0; max-width: 1120px;
+      background: #fff8e6; border: 1px dashed var(--yellow); border-radius: 14px;
+      padding: 14px 18px; font-size: 13px; color: #684e07; line-height: 1.6;
+    }
+
+    footer { background: var(--blue-ink); color: #b9cbd9; padding: 40px 0; font-size: 13px; margin-top: 40px; }
+    .foot-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
+    footer a { color: #fff; font-weight: 700; text-decoration: none; }
+    footer a:hover { color: var(--yellow); }
+  </style>
+</head>
+<body class="lang-en">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">T</span>
+      <span>
+        <b>Technovation Girls <span style="color:var(--orange)">Kyrgyzstan</span></b>
+        <small class="en">a TECHAIM Foundation program</small>
+        <small class="ru">программа фонда «Тэкайым»</small>
+      </span>
+    </a>
+    <nav class="navlinks">
+      <a href="index.html"><span class="en">← Main page</span><span class="ru">← Главная</span></a>
+      <a href="index.html#participants"><span class="en">For participants</span><span class="ru">Участницам</span></a>
+      <a href="index.html#mentors"><span class="en">For mentors</span><span class="ru">Менторам</span></a>
+      <a href="index.html#partners"><span class="en">Partners</span><span class="ru">Партнёры</span></a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" id="btn-en" class="active" onclick="setLang('en')">EN</button>
+      <button type="button" id="btn-ru" onclick="setLang('ru')">RU</button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="en">Season 2025–2026</span><span class="ru">Сезон 2025–2026</span></span>
+      <h1 class="en">Projects of Technovation Girls <span class="accent">Kyrgyzstan 2026</span></h1>
+      <h1 class="ru">Проекты Technovation Girls <span class="accent">Kyrgyzstan 2026</span></h1>
+      <p class="en">After months of work, we are proud to present the mobile apps and AI projects created by the teams of the 2025–2026 season. Each project includes a description and a link to the team's pitch video. Projects are grouped by theme — use the navigation below.</p>
+      <p class="ru">После нескольких месяцев работы мы с гордостью представляем мобильные приложения и ИИ-проекты команд сезона 2025–2026. Для каждого проекта — описание и ссылка на питч-видео команды. Проекты сгруппированы по темам — используйте навигацию ниже.</p>
+      <div class="hero-badges">
+        <span class="hbadge"><b>60</b> <span class="en">teams</span><span class="ru">команд</span></span>
+        <span class="hbadge"><b>205</b> <span class="en">girls</span><span class="ru">девочек</span></span>
+        <span class="hbadge"><b>42</b> <span class="en">mentors</span><span class="ru">менторов</span></span>
+        <span class="hbadge"><b>7</b> <span class="en">regions</span><span class="ru">областей</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME NAV ============ -->
+  <div class="theme-nav">
+    <div class="wrap">
+      <h2><span class="en">Projects by theme</span><span class="ru">Проекты по темам</span></h2>
+      <div class="chips">
+        <a class="chip c1" href="#ai"><span class="en">Artificial Intelligence</span><span class="ru">Искусственный интеллект</span></a>
+        <a class="chip c2" href="#education"><span class="en">Education</span><span class="ru">Образование</span></a>
+        <a class="chip c3" href="#health"><span class="en">Health</span><span class="ru">Здоровье</span></a>
+        <a class="chip c4" href="#safety"><span class="en">Gender equality &amp; safety</span><span class="ru">Гендерное равенство и безопасность</span></a>
+        <a class="chip c5" href="#environment"><span class="en">Environment</span><span class="ru">Экология</span></a>
+        <a class="chip c6" href="#inclusion"><span class="en">Inclusive society</span><span class="ru">Инклюзивное общество</span></a>
+        <a class="chip c7" href="#smartcity"><span class="en">Smart City &amp; economy</span><span class="ru">Умный город и экономика</span></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============ THEME: AI ============ -->
+  <section class="theme" id="ai">
+    <div class="wrap">
+      <span class="theme-mark" style="background: var(--violet);"></span>
+      <h2 class="en">Projects using Artificial Intelligence</h2>
+      <h2 class="ru">Проекты с использованием искусственного интеллекта (AI)</h2>
+      <p class="theme-sub en">Teams that built AI-powered features — chatbots, recommendations, computer vision, and speech recognition — into their solutions.</p>
+      <p class="theme-sub ru">Команды, которые встроили в свои решения функции на базе ИИ — чат-боты, рекомендации, компьютерное зрение и распознавание речи.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Techvibe.girls <span class="en">Kerben, Jalal-Abad Region</span><span class="ru">Кербен, Джалал-Абадская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Promi - is AI Мarketing specialist</div>
+          <p class="en">My project is an AI marketing assistant for small businesses such as beauty salons, cafes, shops, and online brands. It helps attract more customers and increase sales without hiring an expensive marketer. Users can instantly generate social media posts, advertisements, customer replies, and promotional offers. The AI adapts to each business by considering its services, location, and communication style. Our solution is simple, fast, and affordable, allowing even beginner entrepreneurs to promote their business effectively and grow their revenue.</p>
+          <p class="ru">Promi — ИИ-ассистент по маркетингу для малого бизнеса: салонов красоты, кафе, магазинов и онлайн-брендов. Он помогает привлекать клиентов и увеличивать продажи без найма дорогого маркетолога: мгновенно генерирует посты для соцсетей, рекламу, ответы клиентам и акции. ИИ подстраивается под каждый бизнес, учитывая его услуги, локацию и стиль общения.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Тансулуу Бейшенова, Adina Zhenishbekova, Aruuke Mombekova<br><b>Mentor:</b> Paras Halingale</span>
+            <span class="ru"><b>Участницы:</b> Тансулуу Бейшенова, Adina Zhenishbekova, Aruuke Mombekova<br><b>Ментор:</b> Paras Halingale</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/dUhZ5A6erkQ?si=iA8wFwfAL9zmHZsk" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Trustify <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Trustify</div>
+          <p class="en">Trustify is a fact-checking app that allows users to enter a text or link. The app analyzes the content, verifies it against primary sources, shows a reliability score, and suggests trustworthy alternatives. It helps users quickly identify accurate information in a world full of misinformation. Due to a fast-growing amount of scam in the whole world, this app will reduce the occurrence of misinformation terrorizing people. Fake information is an emerging social issue and there are thousand of people being deceived by distortion.</p>
+          <p class="ru">Trustify — приложение для проверки фактов: пользователь вводит текст или ссылку, а приложение анализирует содержание, сверяет его с первоисточниками, показывает рейтинг достоверности и предлагает надёжные альтернативы. В мире, полном дезинформации, Trustify помогает быстро отличать правду от фейков и защищает людей от обмана.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Sajida Akunova, Aziza Amanova, Lira Iskenderova, Kyzjibek Ismailova, Tolgonai Abdyldaeva<br><b>Mentor:</b> Alina Beishenalieva</span>
+            <span class="ru"><b>Участницы:</b> Sajida Akunova, Aziza Amanova, Lira Iskenderova, Kyzjibek Ismailova, Tolgonai Abdyldaeva<br><b>Ментор:</b> Alina Beishenalieva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/RzTMW_jH4ls?feature=shared" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">SafeAI <span class="en">Naryn, Naryn Region</span><span class="ru">Нарын, Нарынская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">AIThinkingLibrary</div>
+          <p class="en">A structured learning library with articles, curated resources, and practice tasks that teaches how to think critically and independently while using AI.</p>
+          <p class="ru">Структурированная обучающая библиотека со статьями, подборками ресурсов и практическими заданиями, которая учит мыслить критически и независимо при использовании искусственного интеллекта.</p>
+          <div class="people">
+            <span class="en"><b>Participant:</b> Ravilya Karpekova<br><b>Mentor:</b> Jennifer Tsui</span>
+            <span class="ru"><b>Участницы:</b> Ravilya Karpekova<br><b>Ментор:</b> Jennifer Tsui</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/Imh1ZpJA6Xg?si=eLSy2Bjh8ibartyJ" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">AIX <span class="en">Naryn, Naryn Region</span><span class="ru">Нарын, Нарынская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">RecAI</div>
+          <p class="en">Our project is an intelligent system designed to detect content created using neural networks. Its main goal is to help users distinguish real photos and videos from those generated by artificial intelligence, including deepfake content. The platform analyzes uploaded images and videos using modern machine learning and computer vision algorithms. It identifies characteristic signs of AI generation, such as artifacts, inconsistencies in details, and structural anomalies. The project can be used by individual users as well as companies, educational institutions, and media organizations to enhance digital security and trust in information.</p>
+          <p class="ru">RecAI — интеллектуальная система для выявления контента, созданного нейросетями, включая дипфейки. Платформа анализирует загруженные фото и видео с помощью алгоритмов машинного обучения и компьютерного зрения и находит характерные признаки ИИ-генерации: артефакты, несоответствия деталей и структурные аномалии. Решение полезно и обычным пользователям, и компаниям, школам и СМИ.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Amina Eshmuhambetova, Асылай Бейшенова, Umut Bolotbekova, Medina Zhenishbekova, Nurizat Sulaimanova<br><b>Mentor:</b> Bermet Osmonova</span>
+            <span class="ru"><b>Участницы:</b> Amina Eshmuhambetova, Асылай Бейшенова, Umut Bolotbekova, Medina Zhenishbekova, Nurizat Sulaimanova<br><b>Ментор:</b> Bermet Osmonova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/GkQC0GGKVMU" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">True Hunters <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Mobile App &quot;TruVi&quot;</div>
+          <p class="en">Teens often get their news from social media, where the information may be inaccurate. Our research showed that many have encountered fake news and even shared it without realizing it. TruVi is a mobile app that helps users verify whether news is real or fake by providing a trust score and explaining the signs of misinformation. It also teaches teens how to recognize misinformation.</p>
+          <p class="ru">Подростки часто узнают новости из соцсетей, где информация бывает недостоверной — наше исследование показало, что многие сталкивались с фейками и даже делились ими, не подозревая об этом. TruVi помогает проверить, настоящая ли новость: показывает рейтинг доверия, объясняет признаки дезинформации и учит подростков распознавать фейки.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aiturgan Pamirova, Miraida Kadyrbekova, Saikal Zhusupbekova, Akylai Samudinova<br><b>Mentors:</b> Myskal Sagynbaeva, BERMET ZHUMABAEVA</span>
+            <span class="ru"><b>Участницы:</b> Aiturgan Pamirova, Miraida Kadyrbekova, Saikal Zhusupbekova, Akylai Samudinova<br><b>Менторы:</b> Myskal Sagynbaeva, BERMET ZHUMABAEVA</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/_54X4moE-ck" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME: EDUCATION ============ -->
+  <section class="theme" id="education">
+    <div class="wrap">
+      <span class="theme-mark" style="background: var(--blue);"></span>
+      <h2 class="en">Projects on Education</h2>
+      <h2 class="ru">Проекты на тему «Образование»</h2>
+      <p class="theme-sub en">Apps that help schoolchildren learn, choose a career, find grants and scholarships, and study in Kyrgyz, Russian, and English.</p>
+      <p class="theme-sub ru">Приложения, которые помогают школьникам учиться, выбирать профессию, находить гранты и стипендии и заниматься на кыргызском, русском и английском языках.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Goals <span class="en">Chok Tal, Issyk-Kul Region</span><span class="ru">Чок-Тал, Иссык-Кульская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Etnokyrgyz</div>
+          <p class="en">Our project is a web platform designed to help people learn the Kyrgyz language from Russian and other languages. Many people struggle to speak Kyrgyz fluently, and foreigners have limited resources. Our goal is to make learning simple and engaging. The platform offers lessons, vocabulary, grammar, pronunciation, and dialogues. Users can learn at their own pace and track progress while building confidence in communication.</p>
+          <p class="ru">Веб-платформа для изучения кыргызского языка с русского и других языков. Многим трудно свободно говорить по-кыргызски, а у иностранцев мало ресурсов — наша цель сделать обучение простым и увлекательным. Платформа предлагает уроки, лексику, грамматику, произношение и диалоги: учитесь в своём темпе и отслеживайте прогресс.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Almira Bularbekova, Farida Sarbagysheva, Aibiike Kalybekova, Zarema Muratbekova<br><b>Mentor:</b> Zhanara Koomanova</span>
+            <span class="ru"><b>Участницы:</b> Almira Bularbekova, Farida Sarbagysheva, Aibiike Kalybekova, Zarema Muratbekova<br><b>Ментор:</b> Zhanara Koomanova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/wAbkHK4WuPw?si=4R7RD99dp_GSp6MC" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Pro Skill Code <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Skill Step</div>
+          <p class="en">Our project, SkillStep, is a website designed to help teenagers discover and choose their future careers. Many students feel confused when making this important decision, so we created a platform that provides clear guidance, career information, and real-life examples. Users can explore different professions, identify their interests, and better understand their strengths. The website is simple, user-friendly, and accessible to everyone. Our goal is to reduce uncertainty and help teenagers make confident and informed choices about their future.</p>
+          <p class="ru">SkillStep — сайт, который помогает подросткам выбрать будущую профессию. Многие школьники теряются перед этим важным решением, поэтому мы создали платформу с понятными ориентирами, информацией о профессиях и реальными примерами. Пользователи изучают разные специальности, определяют интересы и сильные стороны и делают осознанный выбор.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aigerim Zhunushova, Aizat Nurillaeva, Nurayim Asankanova, Eliza Abdraimova<br><b>Mentors:</b> Alina Muratbekova, Kanyshai Tolomushova</span>
+            <span class="ru"><b>Участницы:</b> Aigerim Zhunushova, Aizat Nurillaeva, Nurayim Asankanova, Eliza Abdraimova<br><b>Менторы:</b> Alina Muratbekova, Kanyshai Tolomushova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/H06M_IqQYho?si=67Ha1eu2-iT-GZ-A" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">seraphim <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">EduPlat</div>
+          <p class="en">Eduplat is an AI-powered platform that democratizes access to global education by replacing expensive admission consultants. We help students navigate the chaotic application process through a centralized platform. Our core feature, &quot;Dynamic Probability,&quot; not only calculates a student&#x27;s admission chances but provides a personalized, step-by-step roadmap to improve them. Along with an AI essay reviewer and a deadline tracker, Eduplat turns application anxiety into a clear, actionable algorithm, empowering talents from developing regions to reach their dream universities.</p>
+          <p class="ru">EduPlat — платформа на базе ИИ, которая делает мировое образование доступнее, заменяя дорогих консультантов по поступлению. Ключевая функция «Dynamic Probability» не только рассчитывает шансы на поступление, но и даёт персональную пошаговую дорожную карту их повышения. Вместе с ИИ-проверкой эссе и трекером дедлайнов EduPlat превращает тревогу абитуриента в чёткий алгоритм действий.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Zhanel Usonkulova, Adelia Kabylbaeva, Aikanysh Omuralieva, Aiza Tugolbaeva, ASEL MAMATKALYKOVA<br><b>Mentor:</b> Gulzat Maichinova</span>
+            <span class="ru"><b>Участницы:</b> Zhanel Usonkulova, Adelia Kabylbaeva, Aikanysh Omuralieva, Aiza Tugolbaeva, ASEL MAMATKALYKOVA<br><b>Ментор:</b> Gulzat Maichinova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/Z5Yd0LEqxK0?feature=shared" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">PixelGirls <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">SoloStart</div>
+          <p class="en">The SoloStart project is designed for students who have just moved away from their parents&#x27; home and are learning to live separately. This app has instructions on how to live independently and not depend on other people. There you will find individual tasks and guides.</p>
+          <p class="ru">SoloStart создан для студентов, которые только переехали от родителей и учатся жить самостоятельно. В приложении — инструкции по независимой жизни, индивидуальные задания и гайды.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aya Turatbekova, Айназик Маматбекова, s seiduldaeva, Bermet Akmatova<br><b>Mentor:</b> Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Aya Turatbekova, Айназик Маматбекова, s seiduldaeva, Bermet Akmatova<br><b>Ментор:</b> Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/-3OWxxvXUj8?si=yhvsvRMlMqTyYmZr" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">TRIPLE VIBE✨ <span class="en">Batken, Batken Region</span><span class="ru">Баткен, Баткенская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Sprout</div>
+          <p class="en">Helps people discover their hobbies and builds self-confidence.</p>
+          <p class="ru">Sprout помогает людям находить свои увлечения и обретать уверенность в себе.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Kanykei Gulomidinova, Aigerim Satybaldyeva, Ayana Kurbanbekova, Tachpolotova Begimai<br><b>Mentor:</b> Ainaz Ysmaiylova</span>
+            <span class="ru"><b>Участницы:</b> Kanykei Gulomidinova, Aigerim Satybaldyeva, Ayana Kurbanbekova, Tachpolotova Begimai<br><b>Ментор:</b> Ainaz Ysmaiylova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/J-i9SOw0GT4?t=12&amp;feature=shared" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Tech trek girls <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Mobile App &quot;EduTalas&quot;</div>
+          <p class="en">EduTalas is a mobile app designed to improve access to education in Kyrgyzstan’s remote Talas region. It solves two main problems: scattered course information and geographic barriers. The app provides a unified database of offline and online learning opportunities, filters courses by location and cost (free vs. paid), offers interactive maps and schedules for offline classes, and sends notifications about new opportunities. By centralizing educational resources and making them easy to discover, EduTalas empowers young people in mountainous areas to find relevant, nearby, or remote learning options—fostering continuous skill development and regional educational engagement.</p>
+          <p class="ru">EduTalas улучшает доступ к образованию в отдалённой Таласской области: приложение собирает в единую базу офлайн- и онлайн-курсы, фильтрует их по локации и стоимости, показывает интерактивные карты и расписания и присылает уведомления о новых возможностях. Так молодёжь горных районов находит подходящее обучение рядом или онлайн.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Uulkelsin Raisheva, Элмина Аскарова, Жазель Джусупова, Фатима Досумбекова, Айбийке Конушбекова<br><b>Mentor:</b> Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Uulkelsin Raisheva, Элмина Аскарова, Жазель Джусупова, Фатима Досумбекова, Айбийке Конушбекова<br><b>Ментор:</b> Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/GU3GJ5HqMBU" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Kyrgyz <span class="en">Chuyskoe, Chüy Region</span><span class="ru">Чуйское, Чуйская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">TilduuDostor</div>
+          <p class="en">Kyrgyz World” / «Менин Кыргызстаным» is an interactive app that teaches children Kyrgyz through exploration, culture, and play. Kids travel across Kyrgyzstan, meet local heroes, discover cities, and learn traditions while practicing language in dialogues with clickable words. Each lesson combines new vocabulary, mini-games like “Find the Picture” or “Assemble the Dialogue,” and simplified versions of traditional games such as Ordo and Ashik. Children unlock map locations, explore national food, clothing, and music, and strengthen memory, attention, thinking, and conversational skills. The app makes learning Kyrgyz engaging, interactive, and deeply connected to the country’s culture.</p>
+          <p class="ru">«Менин Кыргызстаным» — интерактивное приложение, которое учит детей кыргызскому языку через исследование, культуру и игру. Дети путешествуют по Кыргызстану, знакомятся с героями и традициями, практикуют язык в диалогах, играют в мини-игры и упрощённые версии традиционных игр — ордо и ашик. Приложение развивает память, внимание, мышление и разговорные навыки.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aruuke Muratova, Kauhar Muratova, Zainab Anvarova, Aisha Anvarova<br><b>Mentor:</b> Zhazgul Aidakeeva</span>
+            <span class="ru"><b>Участницы:</b> Aruuke Muratova, Kauhar Muratova, Zainab Anvarova, Aisha Anvarova<br><b>Ментор:</b> Zhazgul Aidakeeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/od7NT8sJ7Nk" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">NANA.kg <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Cyber ABC</div>
+          <p class="en">The world&#x27;s first &#x27;Cyber ABC for children aged 3–10, where safety begins with the games. We turn the complex rules of digital hygiene into a game with ratings and rewards, building a culture of safe online behavior from early childhood, rather than through the method of prohibitions.</p>
+          <p class="ru">Первая в мире «Кибер-азбука» для детей 3–10 лет, где безопасность начинается с игры. Мы превращаем сложные правила цифровой гигиены в игру с рейтингами и наградами, формируя культуру безопасного поведения онлайн с раннего детства — без метода запретов.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Ayana Eldarova, Nurzhamal Zarylbekova, Adema Asekova<br><b>Mentor:</b> Cholpon Zhakypova</span>
+            <span class="ru"><b>Участницы:</b> Ayana Eldarova, Nurzhamal Zarylbekova, Adema Asekova<br><b>Ментор:</b> Cholpon Zhakypova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/-wEm5v6len8?si=oK7pc6SEC10TAdxb" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Osh Powerpuff girls <span class="en">Osh</span><span class="ru">Ош</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">SaySalam</div>
+          <p class="en">SaySalam is a revolutionary mobile platform designed to revitalize the Kyrgyz language for a digital-first generation. While language barriers often isolate expats, tourists, and international students, SaySalam fosters connection through cutting-edge technology. Our app features an AI Pronunciation Coach for instant feedback and a Real-Time AI Voice Translator for seamless daily interactions. Beyond AI, users enjoy structured lessons, interactive quizzes, and smart flashcards tailored for all levels. By blending cultural preservation with modern utility, SaySalam empowers youth and newcomers alike to speak Kyrgyz with confidence, ensuring our vibrant heritage thrives in an interconnected world.</p>
+          <p class="ru">SaySalam — мобильная платформа, которая возрождает кыргызский язык для цифрового поколения. ИИ-тренер произношения даёт мгновенную обратную связь, а голосовой ИИ-переводчик в реальном времени помогает в повседневном общении. Пользователей ждут структурированные уроки, интерактивные квизы и умные карточки для всех уровней.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Altyna Attokurova, Amina Orozalieva, Akylai Kubanychbekova<br><b>Mentors:</b> Kalmyrza Zholchubekov, Roshana Foizova</span>
+            <span class="ru"><b>Участницы:</b> Altyna Attokurova, Amina Orozalieva, Akylai Kubanychbekova<br><b>Менторы:</b> Kalmyrza Zholchubekov, Roshana Foizova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/44CEqGjc6fU?si=diULvYT2NY_Wx5SH" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">AIWave <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Mobile App &quot;FocusApp&quot;</div>
+          <p class="en">FocusApp is a mobile application designed to help teenagers overcome procrastination and focus on their studies. It combines a Pomodoro timer and automatic blocking of social networks (TikTok, Instagram) to eliminate distractions during homework. To make learning fun, the app allows you to use game features with scores, badges, and progress tracking. The app is available in Russian and Kyrgyz and is designed not to take away the phone, but to teach teenagers how to use it competently, reduce stress and form productive habits for life.</p>
+          <p class="ru">FocusApp помогает подросткам победить прокрастинацию и сосредоточиться на учёбе: таймер Pomodoro и автоматическая блокировка соцсетей (TikTok, Instagram) убирают отвлекающие факторы во время домашних заданий, а игровые механики с баллами, бейджами и трекингом прогресса делают учёбу увлекательной. Приложение доступно на русском и кыргызском языках.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aisana Mambetalieva, Мээрим Тыныстанова, Aijamal Syidalieva, Жансезим Малабекова<br><b>Mentors:</b> Myskal Sagynbaeva, Rabiga Dzhumabekova</span>
+            <span class="ru"><b>Участницы:</b> Aisana Mambetalieva, Мээрим Тыныстанова, Aijamal Syidalieva, Жансезим Малабекова<br><b>Менторы:</b> Myskal Sagynbaeva, Rabiga Dzhumabekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/6AQ2V5VuZ8Y" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Lingo Tech <span class="en">Batken, Batken Region</span><span class="ru">Баткен, Баткенская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Russian start</div>
+          <p class="en">Your space adventure into the Russian language! Launch your exciting journey from zero with our gamified app for beginners. Why is &quot;RUSSIAN START!&quot; the best liftoff? Learn through play: Turn studying into a game with fun astronaut characters and engaging quests. From zero to communication: Master the alphabet (Cyrillic), basic vocabulary, and essential phrases for life and travel. Fast and effective: Learn in just 10 minutes a day using a proven micro-learning method. Listen and speak: Practice correct pronunciation with audio recordings from native speakers. Take your first step towards fluent communication! Your mission to master Russian starts here.</p>
+          <p class="ru">Космическое приключение в русский язык! Геймифицированное приложение для начинающих: учитесь играя с персонажами-астронавтами, осваивайте кириллицу, базовую лексику и ключевые фразы для жизни и путешествий. Метод микрообучения — всего 10 минут в день, а аудиозаписи носителей помогают отработать правильное произношение.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Surmahan Imamalieva, Askaralieva Aitunuk, maksutova Erkeaiym, Sumaya Kadyralieva, Nurkyz Abdijalilova<br><b>Mentor:</b> Ainaz Ysmaiylova</span>
+            <span class="ru"><b>Участницы:</b> Surmahan Imamalieva, Askaralieva Aitunuk, maksutova Erkeaiym, Sumaya Kadyralieva, Nurkyz Abdijalilova<br><b>Ментор:</b> Ainaz Ysmaiylova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/ZwjTxNHIZVc" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">CODEQUEEN <span class="en">Batken, Batken Region</span><span class="ru">Баткен, Баткенская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">App Craft</div>
+          <p class="en">App Craft is a modern educational platform designed for students in Kyrgyzstan to master the ORT and State Exams. Our Mission: To make learning mobile, accessible, and personalized, helping every student secure a university scholarship. Key Features: Test Simulator: Up-to-date questions for all main and elective subjects. Video Lessons: Expert breakdowns of complex topics. Smart Analytics: Tracks progress and identifies weak areas. Exam Mode: Real-time simulations to master your timing. Why App Craft? It’s an all-in-one, gamified experience updated to the latest standards. App Craft — your digital tutor, always in your pocket!</p>
+          <p class="ru">App Craft — современная образовательная платформа для подготовки к ОРТ и государственным экзаменам: актуальный тренажёр тестов по всем предметам, видеоуроки с разбором сложных тем, умная аналитика прогресса и режим экзамена с таймером. Миссия — сделать обучение мобильным, доступным и персональным и помочь каждому школьнику получить грант в университет.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Datkaiym Saidimarova, Asema Vaidilaeva<br><b>Mentor:</b> Ainaz Ysmaiylova</span>
+            <span class="ru"><b>Участницы:</b> Datkaiym Saidimarova, Asema Vaidilaeva<br><b>Ментор:</b> Ainaz Ysmaiylova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/OcuYpCEwceg" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Boost IQ <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Mobile App &quot;ORT KYRGYZSTAN&quot;</div>
+          <p class="en">Our project is a mobile application for preparation for the National Testing that helps schoolchildren prepare for the exam effectively and conveniently. The application contains tests on key subjects with detailed explanations, allowing for better understanding of mistakes and consolidation of knowledge. The system analyzes the user&#x27;s results, identifies weak topics, and offers a personalized study plan. The application also sends reminders to support regular preparation. Unlike courses and tutors, our solution is more accessible and convenient because it combines everything you need in one place.</p>
+          <p class="ru">Мобильное приложение для подготовки к Общереспубликанскому тестированию: тесты по ключевым предметам с подробными объяснениями, анализ результатов, выявление слабых тем и персональный план подготовки. Напоминания поддерживают регулярные занятия — всё необходимое в одном приложении, доступнее курсов и репетиторов.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Аяна Сандыбаева, Akmaral Djambulova, Aelina Kerimbaeva, Арууке Айтматова, Aisalkyn Keneshbekova<br><b>Mentor:</b> Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Аяна Сандыбаева, Akmaral Djambulova, Aelina Kerimbaeva, Арууке Айтматова, Aisalkyn Keneshbekova<br><b>Ментор:</b> Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/SsuQGP93Tn0" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Altyn Bars <span class="en">Naryn, Naryn Region</span><span class="ru">Нарын, Нарынская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">LightLearn</div>
+          <p class="en">Light Learn is an app designed to help students prepare for Olympiads. We want to make it easier for them to prepare. There are several features available. Study hard. Every student is capable of more if they have support and the right tools.</p>
+          <p class="ru">LightLearn помогает школьникам готовиться к олимпиадам — мы хотим сделать подготовку проще и доступнее. Каждый ученик способен на большее, если у него есть поддержка и правильные инструменты.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Бактыгуль Нурбекова, Асема Жеңишбекова, Раяна Нурбекова, Amina Zhanubekova<br><b>Mentor:</b> Jennifer Tsui</span>
+            <span class="ru"><b>Участницы:</b> Бактыгуль Нурбекова, Асема Жеңишбекова, Раяна Нурбекова, Amina Zhanubekova<br><b>Ментор:</b> Jennifer Tsui</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/yGtK7oLMcK0" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">OnlyUp <span class="en">Osh, Osh Region</span><span class="ru">Ош, Ошская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">LingoUp</div>
+          <p class="en">​LingoUp is a web-based educational tool that transforms how students learn idioms and philological concepts. We address the gap in advanced language acquisition by offering a digital space for deep linguistic exploration. Our platform uses interactive features to help users improve their verbal productivity and academic performance. Whether for school or personal growth, LingoUp bridges the gap between classical linguistics and the digital age, providing a powerful resource for anyone looking to move beyond basic fluency to true cultural understanding.</p>
+          <p class="ru">LingoUp — веб-инструмент, который меняет подход к изучению идиом и филологических понятий. Мы закрываем пробел в продвинутом изучении языка: интерактивные функции помогают улучшить речь и академические результаты, соединяя классическую лингвистику с цифровой эпохой.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Myrzaiym Alieva, Akylai Gaparova<br><b>Mentors:</b> Toraim Alimzhan kyzy, Aigerim Zholchubekova</span>
+            <span class="ru"><b>Участницы:</b> Myrzaiym Alieva, Akylai Gaparova<br><b>Менторы:</b> Toraim Alimzhan kyzy, Aigerim Zholchubekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/Wd02mi6ksPs?is=0dL0xa872KwKXuO4" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">SEZIM <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division beginner">Beginner</span>
+          </div>
+          <div class="appname">My Math (Moya Matematika)</div>
+          <p class="en">To transform the challenges of Kyrgyzstan’s new 12-year curriculum into an engaging digital adventure for primary school students. Due to the recent educational reform in Kyrgyzstan, the curriculum has become more rigorous. While the new textbooks offer creative and complex problems, many students in grades 1–4 struggle to keep up with the pace. My Math is an interactive mobile application designed to bridge this gap. It adapts the official curriculum into a series of &quot;play-to-learn&quot; levels where children practice arithmetic, logic, and problem-solving.</p>
+          <p class="ru">«Моя математика» превращает вызовы новой 12-летней программы Кыргызстана в увлекательное цифровое приключение для младших школьников. Учебники стали сложнее, и многим ученикам 1–4 классов трудно успевать за темпом. Приложение адаптирует официальную программу в игровые уровни, где дети тренируют арифметику, логику и решение задач.</p>
+          <div class="people">
+            <span class="en"><b>Participant:</b> Sezim Daminova<br><b>Mentor:</b> Dilfuza Tursunbekova</span>
+            <span class="ru"><b>Участницы:</b> Sezim Daminova<br><b>Ментор:</b> Dilfuza Tursunbekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/iTvhG8cbBnI" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">ANA time <span class="en">Naryn, Naryn Region</span><span class="ru">Нарын, Нарынская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Tarykh time</div>
+          <p class="en">Tarykh Time” is a mobile app designed to make learning the history of Kyrgyzstan engaging and accessible for teenagers aged 12–18. It addresses the problem of boring and difficult traditional learning methods by replacing long texts with short animated videos and interactive quizzes. Users can choose topics, switch languages, and customize the app’s visual theme, making the learning experience more flexible and user-friendly. The project promotes quality education and helps reduce inequality by making knowledge more accessible and interesting for all learners, supporting SDG 4 and SDG 10.</p>
+          <p class="ru">«Тарых Time» делает изучение истории Кыргызстана увлекательным и доступным для подростков 12–18 лет: вместо длинных скучных текстов — короткие анимированные видео и интерактивные квизы. Можно выбирать темы, переключать языки и настраивать оформление приложения. Проект поддерживает ЦУР 4 и ЦУР 10, делая знания доступнее и интереснее.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aigerim Tynymseitova, Nazima Akylbekova, Ayana Ulanbekova<br><b>Mentor:</b> Bermet Osmonova</span>
+            <span class="ru"><b>Участницы:</b> Aigerim Tynymseitova, Nazima Akylbekova, Ayana Ulanbekova<br><b>Ментор:</b> Bermet Osmonova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/fiK3D-7V8GE?si=sMrL0x6d5cLmE0ne" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME: HEALTH ============ -->
+  <section class="theme" id="health">
+    <div class="wrap">
+      <span class="theme-mark" style="background: var(--turquoise);"></span>
+      <h2 class="en">Projects on Health</h2>
+      <h2 class="ru">Проекты на тему «Здоровье»</h2>
+      <p class="theme-sub en">Solutions for physical and mental health: medication reminders, healthy nutrition, support for patients and young mothers.</p>
+      <p class="theme-sub ru">Решения для физического и психического здоровья: напоминания о лекарствах, здоровое питание, поддержка пациентов и молодых мам.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">TechnoBlaze <span class="en">Jalal-Abad, Jalal-Abad Region</span><span class="ru">Джалал-Абад, Джалал-Абадская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Umai</div>
+          <p class="en">In 2025, 73% of maternal deaths in Kyrgyzstan occurred in rural areas, mainly due to delayed access to medical care. Umai is a mobile app designed to support pregnant women in these regions by providing a pregnancy tracker, trusted medical advice, and reminders for check-ups and medication. The app also features a one-touch emergency button to quickly contact loved ones and health workers. With a simple interface, Umai is accessible even for users with low literacy levels. Our goal is to make maternal healthcare more accessible, timely, and life-saving.</p>
+          <p class="ru">В 2025 году 73% случаев материнской смертности в Кыргызстане пришлись на сельскую местность — в основном из-за позднего доступа к медицинской помощи. Umai — мобильное приложение для поддержки беременных женщин в регионах: трекер беременности, проверенные медицинские советы и напоминания о приёмах и лекарствах. Есть кнопка экстренного вызова, мгновенно связывающая с близкими и медработниками. Простой интерфейс делает приложение доступным даже для пользователей с низким уровнем грамотности.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aruuke Meimanbaeva, Koichubaeva Kanykei, Rayana Abdimitalipova, Ainazik Zulpukarova<br><b>Mentor:</b> Kunduz Keldibekova</span>
+            <span class="ru"><b>Участницы:</b> Aruuke Meimanbaeva, Koichubaeva Kanykei, Rayana Abdimitalipova, Ainazik Zulpukarova<br><b>Ментор:</b> Kunduz Keldibekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/NFDu0Ceusjk?si=ZmcJ4qCUvlkZ0shw" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Datka <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Koldoo App</div>
+          <p class="en">Koldoo App is an AI-powered mood diary designed to support student mental health in Kyrgyzstan. Using Natural Language Processing (NLP), it analyzes entries in Kyrgyz and Russian to detect early signs of emotional distress. When potential crisis markers appear, the system anonymously alerts school psychologists, enabling timely intervention. The app acts as a digital bridge between students and professional help, making psychological support more accessible, scalable, and culturally relevant for over 1.4 million students.</p>
+          <p class="ru">Koldoo App — дневник настроения на базе ИИ для поддержки психического здоровья школьников Кыргызстана. С помощью обработки естественного языка (NLP) приложение анализирует записи на кыргызском и русском языках и выявляет ранние признаки эмоционального неблагополучия. При появлении тревожных маркеров система анонимно уведомляет школьных психологов, позволяя вовремя оказать помощь.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Nuraidai Abdibaitova, Ayana Mambetkadyrova<br><b>Mentor:</b> Dilfuza Tursunbekova</span>
+            <span class="ru"><b>Участницы:</b> Nuraidai Abdibaitova, Ayana Mambetkadyrova<br><b>Ментор:</b> Dilfuza Tursunbekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/wzaMOgRB5XE" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Dre4mWorkers <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">TeenPYO - Teen Put You On</div>
+          <p class="en">This digital support platform helps teenagers navigate the challenges of growing up. It offers short articles on topics like self-esteem, anxiety, body changes, relationships, boundaries, conflicts with parents, and future planning. Users can anonymously join a community to discuss concerns, share experiences, and receive peer support. A built-in AI psychologist is available 24/7 to help teens understand their emotions, practice self-help exercises, and manage stress. The app provides a safe, non-judgmental space where young people can build emotional intelligence, understand themselves better, and realize they are not alone.</p>
+          <p class="ru">Цифровая платформа поддержки, которая помогает подросткам справляться с трудностями взросления: короткие статьи о самооценке, тревожности, отношениях, границах и планировании будущего. Подростки могут анонимно общаться в сообществе и получать поддержку сверстников, а встроенный ИИ-психолог доступен 24/7 и помогает понять эмоции и справиться со стрессом.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Arsen Alua, Burulai Shamshieva<br><b>Mentor:</b> Dilfuza Tursunbekova</span>
+            <span class="ru"><b>Участницы:</b> Arsen Alua, Burulai Shamshieva<br><b>Ментор:</b> Dilfuza Tursunbekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/J4Yajvgf_Gw?si=ocY-8bS-oVGqliPs" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Emi <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">MoodMate</div>
+          <p class="en">MoodMate is a mobile app designed to help users track and visualize their emotional well-being through period of time. Through a several-screen interface, users can securely register, log their daily moods, and review their emotional trends by using a comprehensive history log. Users can get anonymous professional help from a psychologist. Our app will not only support teenagers but also empower them on their way of finding &amp; understanding themselves.</p>
+          <p class="ru">MoodMate — мобильное приложение для отслеживания и визуализации эмоционального состояния. Пользователи безопасно регистрируются, отмечают настроение каждый день и просматривают динамику в истории записей, а также могут анонимно получить помощь профессионального психолога. Приложение поддерживает подростков на пути к пониманию себя.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Saadat Kurumshieva, Aibike Aibekova, Aisha Nazarova<br><b>Mentor:</b> Begimai Akbarova</span>
+            <span class="ru"><b>Участницы:</b> Saadat Kurumshieva, Aibike Aibekova, Aisha Nazarova<br><b>Ментор:</b> Begimai Akbarova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/_ZLBPt-Nves?si=27KB45BzBfBoFBQ6" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">CyberBloom <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">DeabEase</div>
+          <p class="en">Every year, millions of people face diabetes-related complications such as hypoglycemia — sudden and life-threatening drops in blood sugar. These episodes are often caused by missed meals, delayed medication, or lack of timely support. To address this, we created DeabEase, a mobile app for daily diabetes self-management. It combines personalized meal and medication reminders, a health diary for tracking glucose levels, direct doctor communication for urgent situations, and an AI-powered assistant that explains insulin use, provides guidance, and supports users in difficult moments. DeabEase aims to reduce preventable complications and help users manage their condition safely and independently.</p>
+          <p class="ru">Каждый год миллионы людей сталкиваются с осложнениями диабета, такими как гипогликемия — внезапное и опасное падение сахара в крови. DeabEase — приложение для ежедневного самоконтроля при диабете: персональные напоминания о еде и лекарствах, дневник здоровья с уровнями глюкозы, прямая связь с врачом и ИИ-ассистент, который объясняет применение инсулина и поддерживает в сложные моменты.</p>
+          <div class="people">
+            <span class="en"><b>Participant:</b> Aiman Syrgaeva<br><b>Mentors:</b> Zhyrgalbubu Botobaeva, Kylymdar Omorov, Zhyrgal Botobaeva</span>
+            <span class="ru"><b>Участницы:</b> Aiman Syrgaeva<br><b>Менторы:</b> Zhyrgalbubu Botobaeva, Kylymdar Omorov, Zhyrgal Botobaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/77ibZa0Uop8?si=Ijo2G-7MdiOMcOPP" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">BilimkanaGirls <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Mobile App &quot;REALME&quot;</div>
+          <p class="en">We are surrounded by a lot of information, and social media platforms (such as Instagram and TikTok) sets unrealistic standards for lifestyle and appearance. This leads to: low self-esteem constantly comparing oneself to others anxiety and stress dependence on likes and approval. To address this problem, we set a goal: to create a mobile app. Our mobile app will help users build healthy self-esteem, reduce their dependence on social media, and learn to accept themselves without constantly comparing themselves to others, reduce anxiety and stress levels, boost your self-esteem and self-confidence.</p>
+          <p class="ru">Соцсети задают нереалистичные стандарты внешности и образа жизни, что ведёт к низкой самооценке, постоянному сравнению себя с другими, тревожности и зависимости от лайков. Наше приложение помогает выстроить здоровую самооценку, снизить зависимость от соцсетей и уровень стресса и научиться принимать себя.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Altynai Narynbekova, Nagima Chiketaeva, Sheker Anarbekova, Lola Nekrytova, Aruuke Talaibekova<br><b>Mentor:</b> Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Altynai Narynbekova, Nagima Chiketaeva, Sheker Anarbekova, Lola Nekrytova, Aruuke Talaibekova<br><b>Ментор:</b> Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/oIchAdzclpM" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Purple mind <span class="en">Jalal-Abad, Jalal-Abad Region</span><span class="ru">Джалал-Абад, Джалал-Абадская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">LunaCare</div>
+          <p class="en">Our app, LunaCare, is a smart and safe menstrual calendar designed to help girls and women track their cycles, symptoms, and energy levels. It includes an interactive calendar of all cycles, a chatbot for guidance and support, and educational videos and tips about menstrual health and personal care. By combining tracking, learning, and personalized advice, LunaCare empowers users to understand their bodies, plan their lives confidently, and improve overall well-being in a private and friendly way.</p>
+          <p class="ru">LunaCare — умный и безопасный менструальный календарь, который помогает девочкам и женщинам отслеживать цикл, симптомы и уровень энергии. В приложении — интерактивный календарь, чат-бот поддержки и обучающие видео о менструальном здоровье и уходе за собой. LunaCare помогает понимать своё тело и уверенно планировать жизнь — приватно и дружелюбно.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Sofiia Matmusaeva, Aikol Emilbekova, Aijamal Erkinova, Gulnur Jolboldueva, Zhazira Matmusaeva<br><b>Mentors:</b> Roshana Foizova, Nazgul Rajapaeva</span>
+            <span class="ru"><b>Участницы:</b> Sofiia Matmusaeva, Aikol Emilbekova, Aijamal Erkinova, Gulnur Jolboldueva, Zhazira Matmusaeva<br><b>Менторы:</b> Roshana Foizova, Nazgul Rajapaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/1sFti1-mccM?si=UufAxd9CHO3yI6YH" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Brainy  girls <span class="en">Manas, Jalal-Abad Region</span><span class="ru">Манас, Джалал-Абадская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Healthy mind</div>
+          <p class="en">Health Mind is a project that helps people take care of their physical and mental health every day. It combines modern methods of planning, motivation, and habit tracking so that everyone can achieve their goals quickly and easily. With Health Mind, you can monitor your physical health, maintain emotional balance, and develop healthy habits. The project reminds you of important actions, helps organize your day, and makes self-care simple and enjoyable. We believe that health is not just about the body, but also the mind, and harmony between them makes life full, productive, and happy.</p>
+          <p class="ru">Healthy Mind помогает ежедневно заботиться о физическом и психическом здоровье: современные методы планирования, мотивация и трекинг привычек. Приложение напоминает о важных действиях, помогает организовать день и делает заботу о себе простой и приятной. Мы верим: гармония тела и разума делает жизнь полной и продуктивной.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Dinara Toktoralieva, Aisezim Mamirjonova, осиё бахадирова, Гулсун Атабекова, Asylzat Nurmamatova<br><b>Mentors:</b> Roshana Foizova, Irina Pérez</span>
+            <span class="ru"><b>Участницы:</b> Dinara Toktoralieva, Aisezim Mamirjonova, осиё бахадирова, Гулсун Атабекова, Asylzat Nurmamatova<br><b>Менторы:</b> Roshana Foizova, Irina Pérez</span>
+          </div>
+          <a class="video-link" href="https://www.youtube.com/watch?v=GhpIGZSTVWw" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">mini girls <span class="en">Batken, Batken Region</span><span class="ru">Баткен, Баткенская область</span></div>
+            <span class="division beginner">Beginner</span>
+          </div>
+          <div class="appname">FoodMaze</div>
+          <p class="en">Food Waze is an educational game created in Scratch for the Technovation competition. The player moves through a maze by choosing healthy foods and avoiding unhealthy ones. Each level includes tasks about balanced meals, vitamins, and reducing sugar and fat. Correct choices give points, while mistakes provide helpful explanations. The game teaches the basics of healthy eating, supports informed food choices, and develops logical thinking. It is designed for children and teenagers and helps them learn proper nutrition in an interactive way.</p>
+          <p class="ru">FoodMaze — обучающая игра, созданная в Scratch: игрок проходит лабиринт, выбирая полезные продукты и избегая вредных. На каждом уровне — задания о сбалансированном питании, витаминах и снижении сахара и жира. Игра учит основам здорового питания и развивает логическое мышление у детей и подростков.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Albina Kadyrbekova, Aidanek Abdikarova, Myrzaiym Saidimarova<br><b>Mentor:</b> Ainaz Ysmaiylova</span>
+            <span class="ru"><b>Участницы:</b> Albina Kadyrbekova, Aidanek Abdikarova, Myrzaiym Saidimarova<br><b>Ментор:</b> Ainaz Ysmaiylova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/4cO1mn-KCHQ" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">NextGen11 <span class="en">Kant, Chüy Region</span><span class="ru">Кант, Чуйская область</span></div>
+            <span class="division beginner">Beginner</span>
+          </div>
+          <div class="appname">Mood diary</div>
+          <p class="en">Mood Diary is an app that helps people track and express their emotions every day. The app asks simple questions like ‘How are you feeling today?’ and ‘What would you like to share?’ Users can write about their day, record their mood, and reflect on their thoughts. The goal of the app is to help people better understand their feelings, reduce stress, and improve emotional well-being. Mood Diary is simple, friendly, and designed to make self-reflection easy and comfortable for everyone.</p>
+          <p class="ru">Mood Diary помогает ежедневно отслеживать и выражать эмоции. Приложение задаёт простые вопросы вроде «Как ты себя чувствуешь?» — пользователи описывают день, фиксируют настроение и размышляют о своих мыслях. Цель — лучше понимать свои чувства, снижать стресс и улучшать эмоциональное благополучие.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aruuke Nurdinova, Tanyna Doktyrbekova, aibiike smanova, Aruuke Dokturbekova<br><b>Mentors:</b> Saadat Kubanychbekova, Zhazgul Aidakeeva</span>
+            <span class="ru"><b>Участницы:</b> Aruuke Nurdinova, Tanyna Doktyrbekova, aibiike smanova, Aruuke Dokturbekova<br><b>Менторы:</b> Saadat Kubanychbekova, Zhazgul Aidakeeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/U65h89RkC2M" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Insulinki <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">EpiSave</div>
+          <p class="en">Worldwide, 50 million people-including 72,000 in Kyrgyzstan-face unpredictable seizures and social isolation. Existing monitoring wearables are often unaffordable for local families. Our project, EpiSave, bridges this gap. We developed a mobile solution using accelerometer-based detection for real-time emergency alerts and seizure tracking. Our roadmap includes integrating low-cost, DIY-hardware to provide a budget-friendly alternative to expensive medical devices. By prioritizing affordability and GPS-linked safety, we ensure life-saving technology is accessible to everyone, regardless of income.</p>
+          <p class="ru">В мире 50 млн человек — включая 72 000 в Кыргызстане — живут с непредсказуемыми приступами эпилепсии, а носимые мониторы часто не по карману местным семьям. EpiSave — мобильное решение с детекцией приступов по акселерометру, мгновенными экстренными оповещениями с GPS и дневником приступов. В планах — интеграция недорогого DIY-оборудования как бюджетной альтернативы дорогим медицинским устройствам.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Yana Chubarova, Mariam Musaeva<br><b>Mentor:</b> Emir Nurlanov</span>
+            <span class="ru"><b>Участницы:</b> Yana Chubarova, Mariam Musaeva<br><b>Ментор:</b> Emir Nurlanov</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/Y0qKHh-IkaY?si=UVMd1B1I5-Nridj5" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Pheonixes <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Mobile App &quot;Medical Assistance&quot;</div>
+          <p class="en">Medical Assistance&quot; is a mobile app that connects patients with verified doctors through chat and video consultations, providing fast access to medical advice without queues or travel. It includes secure digital storage for medical records, a smart reference guide with first aid and medication compatibility, and a health tracker with reminders and vital sign monitoring. The app serves as a 24/7 digital bridge to healthcare, saving time, improving safety, and keeping all essential medical information in one place.</p>
+          <p class="ru">«Medical Assistance» соединяет пациентов с проверенными врачами через чат и видеоконсультации — быстрый доступ к медицинской помощи без очередей и поездок. В приложении — защищённое хранилище медицинских документов, умный справочник с первой помощью и совместимостью лекарств, а также трекер здоровья с напоминаниями и контролем показателей.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Sumaia Alieva, Rayana Anarkulova<br><b>Mentors:</b> Myskal Sagynbaeva, Gulanda Tagaikulova</span>
+            <span class="ru"><b>Участницы:</b> Sumaia Alieva, Rayana Anarkulova<br><b>Менторы:</b> Myskal Sagynbaeva, Gulanda Tagaikulova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/pV1rlc9aqg0" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Aid Innovators <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">First Aid</div>
+          <p class="en">Many people do not know what to do during accidents and lose time. LifeAid offers simple, step-by-step instructions for cases like bleeding, burns, choking, and unconsciousness.</p>
+          <p class="ru">Многие не знают, что делать при несчастных случаях, и теряют драгоценное время. Приложение даёт простые пошаговые инструкции для случаев кровотечения, ожогов, удушья и потери сознания.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aziza Kalybekova, Fatima Zhaуchybekova<br><b>Mentor:</b> Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Aziza Kalybekova, Fatima Zhaуchybekova<br><b>Ментор:</b> Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/uRVEykGvaRo?si=7VtSAEbtrpjbx3Tw" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">July <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Vita</div>
+          <p class="en">Taking care of your mental health isn’t always easy, and journaling alone can feel overwhelming. Vita is a supportive app that helps users track their mood, reflect on their feelings, and get instant help in difficult moments through an AI chat. Over time, Vita identifies patterns in mood and behavior, helping both users and caregivers better understand changes and provide support. By combining real-time guidance with long-term insights, Vita makes mental health care more accessible and connected.</p>
+          <p class="ru">Заботиться о ментальном здоровье непросто, а вести дневник в одиночку бывает тяжело. Vita помогает отслеживать настроение, рефлексировать и получать мгновенную поддержку в трудные моменты через ИИ-чат. Со временем Vita выявляет паттерны настроения и поведения, помогая пользователям и их близким лучше понимать изменения и вовремя поддерживать.</p>
+          <div class="people">
+            <span class="en"><b>Participant:</b> Dosei kyzy Balaiym</span>
+            <span class="ru"><b>Участницы:</b> Dosei kyzy Balaiym</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/e0VpXA1nXoU?si=rMOOWbOygJFrSGYZ" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME: GENDER EQUALITY & SAFETY ============ -->
+  <section class="theme" id="safety">
+    <div class="wrap">
+      <span class="theme-mark" style="background: var(--orange);"></span>
+      <h2 class="en">Projects on Gender Equality &amp; Safety</h2>
+      <h2 class="ru">Проекты на тему «Гендерное равенство и безопасность»</h2>
+      <p class="theme-sub en">SOS apps, safe-route maps, legal literacy, and tools against bullying and gender-based violence.</p>
+      <p class="theme-sub ru">SOS-приложения, карты безопасных маршрутов, правовая грамотность и инструменты против буллинга и гендерного насилия.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Twinkles <span class="en">Jalal-Abad, Jalal-Abad Region</span><span class="ru">Джалал-Абад, Джалал-Абадская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Safy</div>
+          <p class="en">Our project is a safe and supportive space for girls and women. The app features an SOS button with automatic location sharing to trusted contacts and emergency services, a chat with a psychologist, and sections with guidance on safety, stress, and anxiety management. The project helps users feel calm, confident, and in control in everyday life and emergency situations.</p>
+          <p class="ru">Safy — безопасное и поддерживающее пространство для девочек и женщин. В приложении есть SOS-кнопка с автоматической отправкой геолокации доверенным контактам и экстренным службам, чат с психологом и разделы с рекомендациями по безопасности и управлению стрессом и тревогой. Проект помогает чувствовать себя спокойно и уверенно в повседневной жизни и в экстренных ситуациях.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Turgunkhozhaeva Oishakhon, Datkaiym Baktybaeva, Zhanel Bahtiyarova, Kanykei Apataeva, Ayana Baiyshova<br><b>Mentor:</b> Roshana Foizova</span>
+            <span class="ru"><b>Участницы:</b> Turgunkhozhaeva Oishakhon, Datkaiym Baktybaeva, Zhanel Bahtiyarova, Kanykei Apataeva, Ayana Baiyshova<br><b>Ментор:</b> Roshana Foizova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/nukZotmAd-M?si=rOAdkRvHlL7os6DD" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Star girls 🌟 <span class="en">Kant, Chüy Region</span><span class="ru">Кант, Чуйская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">safety</div>
+          <p class="en">Our application is designed to help children facing bullying so they never feel alone with their problem. When a child opens the app, they see three emojis showing their feelings: good, sad, or very bad. If they choose good, the app sends kind supportive messages. If they choose sad, it offers encouragement and reassurance. If they feel very bad, the app asks what happened and invites them to share. The child can select reasons like money pressure, school bullying, or other.</p>
+          <p class="ru">Приложение помогает детям, столкнувшимся с буллингом, не оставаться один на один с проблемой. Открыв приложение, ребёнок выбирает эмодзи по самочувствию: хорошо, грустно или очень плохо — и получает поддержку, ободрение или возможность рассказать, что случилось. В серьёзных случаях уведомляются родители, а ИИ помогает советом и при необходимости связывает с профессиональной помощью.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Yryskul Kachieva, amina Bakytova<br><b>Mentor:</b> Zhazgul Aidakeeva</span>
+            <span class="ru"><b>Участницы:</b> Yryskul Kachieva, amina Bakytova<br><b>Ментор:</b> Zhazgul Aidakeeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/buHjPEj3nB4" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">VIO <span class="en">Kant, Chüy Region</span><span class="ru">Кант, Чуйская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Angel Alert</div>
+          <p class="en">AngelAlert is a safety-focused mobile app designed to protect people, especially women, in unsafe environments such as dark streets during power outages. Its mission is to help users feel safer by providing instant support and awareness. The app includes a one-tap SOS button, live location sharing, and a map of nearby safe places. In future versions, AngelAlert will use AI to suggest safer routes, detect nearby devices, and activate hidden alerts through a code word. With a simple blue-and-white interface, AngelAlert acts as a digital guardian, offering fast, clear, and reliable protection in critical moments.</p>
+          <p class="ru">AngelAlert — приложение для безопасности, прежде всего женщин, в небезопасной среде, например на тёмных улицах при отключении света. В приложении — SOS-кнопка в одно касание, трансляция геолокации и карта ближайших безопасных мест. В будущих версиях ИИ будет подсказывать безопасные маршруты и активировать скрытые оповещения по кодовому слову.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Аделя Исметова, Амина Туганбекова, Darika Abdyldaeva, Alima Egesheva, Фатманур Мансурова<br><b>Mentor:</b> Altynai Ismailova</span>
+            <span class="ru"><b>Участницы:</b> Аделя Исметова, Амина Туганбекова, Darika Abdyldaeva, Alima Egesheva, Фатманур Мансурова<br><b>Ментор:</b> Altynai Ismailova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/AaMWinGzA3Y?si=mXE15JAZeZM-wbQq" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Axiom <span class="en">Kant, Chüy Region</span><span class="ru">Кант, Чуйская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">SafeStall</div>
+          <p class="en">Our project addresses the critical issue of poor sanitation and inadequate school toilets, causing seventy percent of students to restrict food and water intake. We are creating a real-time resource monitoring platform. The system integrates occupancy sensors and crowdsourced cleanliness audits, transforming chaos into transparent data. The app generates automated reports for administration and parents regarding supply shortages or repairs, upholding the right to hygiene. This is not just a reporting tool, but a digital ecosystem making the school environment safe and dignified for every girl. Integrating this system will reduce class tardiness and prevent chronic health issues among adolescents.</p>
+          <p class="ru">Проект решает проблему плохой санитарии и школьных туалетов, из-за которой 70% учеников ограничивают себя в еде и воде. Мы создаём платформу мониторинга в реальном времени: датчики занятости и краудсорсинговые проверки чистоты превращают хаос в прозрачные данные, а автоматические отчёты для администрации и родителей помогают отстаивать право на гигиену и достоинство каждой девочки.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aijana Sultanbekova, Fatima Misildinova, gulnaz atakulova<br><b>Mentor:</b> BERMET ZHUMABAEVA</span>
+            <span class="ru"><b>Участницы:</b> Aijana Sultanbekova, Fatima Misildinova, gulnaz atakulova<br><b>Ментор:</b> BERMET ZHUMABAEVA</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/cEQwbggmmEU?si=kZ2hgJxhvPG38hEb" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Serenata <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">KyzJolu</div>
+          <p class="en">KyzJolu is a comprehensive solution for the safety of girls in Bishkek. The application builds routes along illuminated streets, and the AI bot “Umai” provides psychological support. The project combines navigation with a mutual aid community and educational platform, turning walking around the city into a safe path for development.</p>
+          <p class="ru">KyzJolu — комплексное решение для безопасности девушек в Бишкеке: приложение строит маршруты по освещённым улицам, а ИИ-бот «Умай» оказывает психологическую поддержку. Проект объединяет навигацию, сообщество взаимопомощи и образовательную платформу, превращая прогулку по городу в безопасный путь развития.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Ademi Akmatalieva, Malika Raiymbekova, Ayimzhan Konuratova<br><b>Mentor:</b> Natalia Mamtseva</span>
+            <span class="ru"><b>Участницы:</b> Ademi Akmatalieva, Malika Raiymbekova, Ayimzhan Konuratova<br><b>Ментор:</b> Natalia Mamtseva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/6bkTpCpGC-U?si=r799w41RSEduDyxD" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">TunLight <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Mobile App &quot;NuruMap&quot;</div>
+          <p class="en">NuruMap is a mobile app designed to improve safety in the city of Talas. Users can mark poorly lit and potentially dangerous areas on the map and submit reports. The app suggests safer routes, especially for pedestrians and schoolchildren, and uses artificial intelligence to analyze data and identify high-risk areas. The collected information can help city services improve lighting. The project contributes to creating a safer urban environment and aligns with the Sustainable Development Goals: SDG 11, SDG 3, SDG 9, and SDG 16.</p>
+          <p class="ru">NuruMap повышает безопасность в городе Таласе: пользователи отмечают на карте плохо освещённые и потенциально опасные места и отправляют отчёты. Приложение предлагает безопасные маршруты для пешеходов и школьников, а ИИ анализирует данные и выявляет зоны риска — эта информация поможет городским службам улучшить освещение.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aiturgan Maratbekova, Malika Beishenalieva<br><b>Mentors:</b> BERMET ZHUMABAEVA, Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Aiturgan Maratbekova, Malika Beishenalieva<br><b>Менторы:</b> BERMET ZHUMABAEVA, Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/HAtzdfyemnQ?si=OjWatpxSNULXJZNW" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">BrightFour <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">SafeWayKids</div>
+          <p class="en">SafeWay Kids” is a mobile application designed to improve children’s safety while they travel from school or activities to home. Many children return home without adult supervision, which creates risks such as poorly lit streets, unsafe neighborhoods, and lack of communication with parents.Our application provides a smart solution that helps parents stay connected with their children at all times. Key features include real-time GPS tracking, an SOS emergency button, safe route suggestions, instant alerts, and quick messaging.“SafeWay Kids” is not just a navigation tool, but a reliable safety companion that gives both children and parents peace of mind every day.</p>
+          <p class="ru">SafeWay Kids повышает безопасность детей по дороге из школы или с занятий домой: многие возвращаются без сопровождения взрослых. GPS-трекинг в реальном времени, SOS-кнопка, безопасные маршруты, мгновенные оповещения и быстрые сообщения помогают родителям всегда оставаться на связи с ребёнком.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aruuzhan Muzurbekova, Ayana Adylbekova, Anjelika Baktygulova, Meerim Yryzbekova<br><b>Mentor:</b> Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Aruuzhan Muzurbekova, Ayana Adylbekova, Anjelika Baktygulova, Meerim Yryzbekova<br><b>Ментор:</b> Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/i2ScRybV39c?feature=shared" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">SafePoint <span class="en">Uch-Terek, Jalal-Abad Region</span><span class="ru">Уч-Терек, Джалал-Абадская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">SafePoint</div>
+          <p class="en">SafePoint is an inclusive emergency response ecosystem designed for zero-click protection. Our application eliminates the Unlock Barrier by utilizing biomechanical shake-detection and voice-activated triggers to initiate instant SOS protocols. Key features include an inclusive high-frequency siren for deaf and non-verbal users, community-driven SafeMaps for crime prevention, and the Digital Witness cloud-evidence system.</p>
+          <p class="ru">SafePoint — инклюзивная экосистема экстренного реагирования с защитой «без единого клика»: SOS активируется встряхиванием телефона или голосом, без разблокировки экрана. Среди функций — высокочастотная сирена для глухих и невербальных пользователей, народные карты безопасности SafeMaps и облачная система доказательств Digital Witness.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Ainazik Tajibaeva, Datkaym Tynarbekova<br><b>Mentors:</b> Arun Saxena, MAIRAMGUL KALYGULOVA</span>
+            <span class="ru"><b>Участницы:</b> Ainazik Tajibaeva, Datkaym Tynarbekova<br><b>Менторы:</b> Arun Saxena, MAIRAMGUL KALYGULOVA</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/y6SwYSwkufc?si=gzY8QFhtEfqwMGUB" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Visionary girls <span class="en">Batken, Batken Region</span><span class="ru">Баткен, Баткенская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Umai Protection</div>
+          <p class="en">Violence against women is a critical global issue today. Every day, thousands face aggression, yet few seek help. Key barriers include fear, social stigma, and lack of support. Our project aims to break these barriers, offering every woman a chance for safety. Our mobile application provides a secure, anonymous chat platform. Users can openly discuss problems without fear. A vital feature is instant connection with qualified psychologists for trauma support. Using advanced encryption, we guarantee total confidentiality. As a social enterprise, we offer basic features for free. Revenue comes from grants, partnerships, and donations. We provide a digital shield for mental health.</p>
+          <p class="ru">Насилие в отношении женщин — острейшая мировая проблема: ежедневно тысячи сталкиваются с агрессией, но немногие обращаются за помощью из-за страха, стигмы и отсутствия поддержки. Наше приложение даёт защищённый анонимный чат, где можно открыто обсудить проблему, и мгновенную связь с квалифицированными психологами. Шифрование гарантирует полную конфиденциальность, а базовые функции бесплатны.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Nuraiym Kamalova, Kaldarova Farida, Altynai Abdikalykova</span>
+            <span class="ru"><b>Участницы:</b> Nuraiym Kamalova, Kaldarova Farida, Altynai Abdikalykova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/jyzI46T2_cg?si=BlE_kuqk7ycxD0H-" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME: ENVIRONMENT ============ -->
+  <section class="theme" id="environment">
+    <div class="wrap">
+      <span class="theme-mark" style="background: var(--blue-dark);"></span>
+      <h2 class="en">Projects on Environment &amp; Responsible Consumption</h2>
+      <h2 class="ru">Проекты на тему «Экология и ответственное потребление»</h2>
+      <p class="theme-sub en">Air quality, water saving, recycling, tree planting, and climate resilience — including solutions for mountain communities.</p>
+      <p class="theme-sub ru">Качество воздуха, экономия воды, переработка отходов, посадка деревьев и климатическая устойчивость — включая решения для горных сообществ.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">NuraiSAN <span class="en">Batken, Batken Region</span><span class="ru">Баткен, Баткенская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">EcoLumo</div>
+          <p class="en">EcoLumo is a mobile app with gamification elements, created by the NuraiSAN team, to make environmental stewardship both virtual and accessible. Our app provides examples of sustainable daily habits, such as recycling plastic, walking, and planting trees, and offers &quot;green points&quot; and rewards for completing environmental tasks. Users can also upload educational videos to raise awareness within the community. By transforming environmental responsibility into an engaging, interactive experience, EcoLumo allows you to record your positive impact, improve your skills, and contribute to a healthier planet.</p>
+          <p class="ru">EcoLumo — мобильное приложение с элементами геймификации, которое делает заботу об экологии доступной и увлекательной. Приложение подсказывает устойчивые повседневные привычки — переработка пластика, пешие прогулки, посадка деревьев — и начисляет «зелёные баллы» и награды за выполнение экозаданий. Пользователи также могут загружать обучающие видео и повышать осведомлённость сообщества.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Nurkyz Ashimova, Aray Ulukbekova, Sezim Kylychbekova, Nurperi Imamalieva<br><b>Mentor:</b> Ainaz Ysmaiylova</span>
+            <span class="ru"><b>Участницы:</b> Nurkyz Ashimova, Aray Ulukbekova, Sezim Kylychbekova, Nurperi Imamalieva<br><b>Ментор:</b> Ainaz Ysmaiylova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/y3BxuALeQVY" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">SaveBite <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">SaveBite</div>
+          <p class="en">SaveBite is a mobile platform that helps solve the problem of food waste in Bishkek. We connect cafes and bakeries that have extra fresh food with people who are ready to buy it with discounts of up to 70%. With our app, businesses can reduce their losses, and users can save money on quality food. At the same time, we help the planet by reducing CO2 emissions. Our platform uses a strong Django backend, which helps us create a transparent system of smart consumption. SaveBite: Save nature in one click!</p>
+          <p class="ru">SaveBite — мобильная платформа против пищевых отходов в Бишкеке: мы соединяем кафе и пекарни, у которых остаётся свежая еда, с людьми, готовыми купить её со скидкой до 70%. Бизнес сокращает убытки, пользователи экономят, а планета получает меньше выбросов CO₂. SaveBite: спасай природу в один клик!</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Sezim Zhusupalieva, Darina Usenova, Madina Saipidinova, Айдай Жолдошбекова, Nagima Esenzhanova<br><b>Mentor:</b> Ann Mwangi</span>
+            <span class="ru"><b>Участницы:</b> Sezim Zhusupalieva, Darina Usenova, Madina Saipidinova, Айдай Жолдошбекова, Nagima Esenzhanova<br><b>Ментор:</b> Ann Mwangi</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/BLRbqgZG4qk?si=lta3ob_3-1b8FmSg" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">GEAR <span class="en">Karakol, Issyk-Kul Region</span><span class="ru">Каракол, Иссык-Кульская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">GEAR</div>
+          <p class="en">GEAR (Global Eco Action Race) is a global competition platform where people from around the world come together to clean up trash, plant trees, earn points, and win real prizes. We turn environmental action into an exciting race with rankings and rewards. The main problem we’re tackling is people’s widespread apathy, which allows pollution and deforestation to keep growing. GEAR fights this by creating platform where people see that their efforts bring visible results and recognition, they actually start taking action.</p>
+          <p class="ru">GEAR (Global Eco Action Race) — глобальная платформа-соревнование: люди по всему миру убирают мусор, сажают деревья, зарабатывают баллы и выигрывают реальные призы. Мы превращаем экологические действия в увлекательную гонку с рейтингами и наградами, борясь с главной проблемой — равнодушием, из-за которого растут загрязнение и вырубка лесов.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Adinai Sagalieva, Izabella Zhusupova<br><b>Mentor:</b> Turan Kutuev</span>
+            <span class="ru"><b>Участницы:</b> Adinai Sagalieva, Izabella Zhusupova<br><b>Ментор:</b> Turan Kutuev</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/K5AceEGHUhw" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">NRN EcoVision <span class="en">Naryn, Naryn Region</span><span class="ru">Нарын, Нарынская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Taza Naryn</div>
+          <p class="en">Our project focuses on the ecology of the city of Naryn. We address environmental issues, especially waste and pollution. Our goal is to improve the city’s condition and raise environmental awareness among residents. We propose practical actions such as organizing clean-up events, installing more trash bins, introducing waste separation, and educating the community. The project aims to encourage responsibility and create a cleaner, safer urban environment.</p>
+          <p class="ru">Проект посвящён экологии города Нарын: мы решаем проблемы отходов и загрязнения. Предлагаем практические шаги — субботники, установку урн, раздельный сбор мусора и просвещение жителей, — чтобы город стал чище и безопаснее, а жители — ответственнее.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aizhibek Telmanova, Aruuke Baiseitova, Ademi Nurbekova, Alia Musaeva<br><b>Mentor:</b> Jennifer Tsui</span>
+            <span class="ru"><b>Участницы:</b> Aizhibek Telmanova, Aruuke Baiseitova, Ademi Nurbekova, Alia Musaeva<br><b>Ментор:</b> Jennifer Tsui</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/9UxjhBT6azw?si=h4_yeuYsSXTb_eA8" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Green Innovators <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">FoodShare KG</div>
+          <p class="en">FoodShare KG tackles two interconnected problems in Kyrgyzstan: food waste and hunger. Our mobile app connects cafes, restaurants, shops, and individuals who have surplus food with people who need it. Donors post available food with photos, descriptions, and pickup times. Users find options on a map, reserve them, and collect the food. A QR code system ensures transparency and prevents fraud. FoodShare KG reduces waste, helps those in need, and creates a more sustainable community.</p>
+          <p class="ru">FoodShare KG решает две взаимосвязанные проблемы Кыргызстана: пищевые отходы и голод. Приложение соединяет кафе, рестораны, магазины и людей с излишками еды с теми, кто в ней нуждается: доноры публикуют еду с фото и временем самовывоза, пользователи находят её на карте и бронируют. QR-система обеспечивает прозрачность и защищает от мошенничества.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Azaliya Askarbekova, Ai-Sel Soltobaeva, Aiperi Zhekshenova, Ayana Akzholova<br><b>Mentors:</b> Aiturgan Osmonalieva, Altynai Ismailova, Dilfuza Tursunbekova</span>
+            <span class="ru"><b>Участницы:</b> Azaliya Askarbekova, Ai-Sel Soltobaeva, Aiperi Zhekshenova, Ayana Akzholova<br><b>Менторы:</b> Aiturgan Osmonalieva, Altynai Ismailova, Dilfuza Tursunbekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/gaQTyMbcZes?si=dZzRiMmAPhaZy2Y0" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">FemBloom <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">EcoMetric</div>
+          <p class="en">A website that is adaptedfor usual people to mmonitor climate situation in the world, to raise their awareness of the global warming…</p>
+          <p class="ru">Сайт, адаптированный для обычных людей, чтобы следить за климатической ситуацией в мире и повышать осведомлённость о глобальном потеплении.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Alsu Atakhanova, Elena Khodaparast, Ayliz Omurzakova, Adelya Alymseitova, Aruuzat A<br><b>Mentor:</b> Aigerim Zholchubekova</span>
+            <span class="ru"><b>Участницы:</b> Alsu Atakhanova, Elena Khodaparast, Ayliz Omurzakova, Adelya Alymseitova, Aruuzat A<br><b>Ментор:</b> Aigerim Zholchubekova</span>
+          </div>
+          <a class="video-link" href="https://www.youtube.com/watch?v=iPZBDdBomJg" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME: INCLUSION ============ -->
+  <section class="theme" id="inclusion">
+    <div class="wrap">
+      <span class="theme-mark" style="background: #158080;"></span>
+      <h2 class="en">Projects on Equal Opportunities &amp; Inclusive Society</h2>
+      <h2 class="ru">Проекты на тему «Равные возможности и инклюзивное общество»</h2>
+      <p class="theme-sub en">Apps for deaf and hard-of-hearing users, people with visual impairments, older adults, and everyone who needs extra support.</p>
+      <p class="theme-sub ru">Приложения для глухих и слабослышащих, людей с нарушениями зрения, пожилых людей и всех, кому нужна дополнительная поддержка.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">kutum <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Kutum</div>
+          <p class="en">Kutum is a caring mobile application designed for people aged 55–90 who are beginning to experience changes in memory or confidence in their daily routines. Through our app, we already help elderly users stay organized, remember important tasks, and maintain their independence while staying connected to their families. Kutum addresses one of the most urgent challenges of aging today — early memory decline and the fear of losing independence. Our platform provides simple reminders, guidance, and a safe connection between seniors and their loved ones, giving families peace of mind.</p>
+          <p class="ru">Kutum — заботливое мобильное приложение для людей 55–90 лет, которые начинают замечать изменения памяти и уверенности в повседневных делах. Приложение помогает пожилым пользователям оставаться организованными, помнить о важных задачах и сохранять самостоятельность, оставаясь на связи с семьёй. Простые напоминания и безопасная связь с близкими дают семьям спокойствие.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Amaliya Orunbekova, Aiym Amantaeva, Nestana Aralbekova, Diana Rysbaeva<br><b>Mentors:</b> Emilia Khudaibergenova, Айчурок Алымбек кызы</span>
+            <span class="ru"><b>Участницы:</b> Amaliya Orunbekova, Aiym Amantaeva, Nestana Aralbekova, Diana Rysbaeva<br><b>Менторы:</b> Emilia Khudaibergenova, Айчурок Алымбек кызы</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/kJRog-ZeHvU" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Seytek Girls <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">StarTalking</div>
+          <p class="en">Our application is aimed at prevention of developmental language disorder (DLD) Nowadays kids start to use phone from really young age, and most of them receive low quality content, which then lead to to lack of speaking practice. The app fosters language growth through gamified practice, requiring children to vocalize sounds and words accurately.</p>
+          <p class="ru">Приложение направлено на профилактику задержки речевого развития: дети рано начинают пользоваться телефоном и часто получают низкокачественный контент, что ведёт к нехватке речевой практики. Игровые упражнения побуждают ребёнка правильно произносить звуки и слова, а родители получают экспертные советы. Приложение восполняет дефицит материалов на кыргызском языке.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Kanykei Minbaeva, Fatima Kalmamatova, Aisezim Nurgazyeva<br><b>Mentor:</b> Dilfuza Tursunbekova</span>
+            <span class="ru"><b>Участницы:</b> Kanykei Minbaeva, Fatima Kalmamatova, Aisezim Nurgazyeva<br><b>Ментор:</b> Dilfuza Tursunbekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/LFtdrlievy8?is=Q8CVe4UCe3mafedP" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">AkylSign <span class="en">Cholpon Ata, Issyk-Kul Region</span><span class="ru">Чолпон-Ата, Иссык-Кульская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">AkylSign</div>
+          <p class="en">AkylSign is an AI-powered platform supporting deaf and hard-of-hearing people in communication and employment. It offers real-time speech-to-text for face-to-face conversations, interactive sign language learning modules, and a job-matching system for inclusive workplaces. Unlike many solutions that focus on one function, AkylSign combines communication, learning, and employment tools in one app. It empowers users with practical support for independence, confidence, and access to opportunities.</p>
+          <p class="ru">AkylSign — платформа на базе ИИ для поддержки глухих и слабослышащих в общении и трудоустройстве: распознавание речи в текст в реальном времени, интерактивные модули изучения жестового языка и система подбора инклюзивных вакансий. AkylSign объединяет общение, обучение и трудоустройство в одном приложении, давая пользователям самостоятельность, уверенность и доступ к возможностям.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Sanat Bolotbekova, Adelia Tashtanova, Rabiya Kudaibergenova<br><b>Mentors:</b> Zhanara Koomanova, Aigerim Zholchubekova</span>
+            <span class="ru"><b>Участницы:</b> Sanat Bolotbekova, Adelia Tashtanova, Rabiya Kudaibergenova<br><b>Менторы:</b> Zhanara Koomanova, Aigerim Zholchubekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/qxryQvmNbCA" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Soul Sisters <span class="en">Talas, Talas Region</span><span class="ru">Талас, Таласская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Mobile App &#x27;Early Autism Check&quot;</div>
+          <p class="en">This project focuses on early autism screening to help identify signs of autism spectrum disorder (ASD) in young children as early as possible. The goal is to create simple, accessible tools and guidelines for parents, teachers, and healthcare providers to recognize early behavioral and developmental differences. By promoting early detection, the project aims to support timely intervention, which can significantly improve a child’s communication, learning, and social skills. Ultimately, it seeks to raise awareness and ensure that children receive the support they need during critical stages of development.</p>
+          <p class="ru">Проект посвящён ранней диагностике признаков расстройства аутистического спектра (РАС) у маленьких детей. Мы создаём простые, доступные инструменты и рекомендации для родителей, учителей и врачей, помогающие замечать ранние поведенческие особенности. Ранняя диагностика позволяет вовремя начать поддержку и значительно улучшить навыки общения, обучения и социализации ребёнка.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Zyinat Masalbekova, Saikal Masalbekova, Алия Almataeva<br><b>Mentors:</b> Aliia Omurbekova, Myskal Sagynbaeva</span>
+            <span class="ru"><b>Участницы:</b> Zyinat Masalbekova, Saikal Masalbekova, Алия Almataeva<br><b>Менторы:</b> Aliia Omurbekova, Myskal Sagynbaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/EYrYcWzUpXM" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEME: SMART CITY & ECONOMY ============ -->
+  <section class="theme" id="smartcity">
+    <div class="wrap">
+      <span class="theme-mark" style="background: var(--yellow);"></span>
+      <h2 class="en">Projects on Smart City, Transport &amp; Economy</h2>
+      <h2 class="ru">Проекты на тему «Умный город, транспорт и экономика»</h2>
+      <p class="theme-sub en">Tourism guides, transport and parking solutions, job platforms, and tools fighting poverty and unemployment.</p>
+      <p class="theme-sub ru">Туристические гиды, решения для транспорта и парковки, платформы для поиска работы и инструменты борьбы с бедностью и безработицей.</p>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">tough grls <span class="en">Kant, Chüy Region</span><span class="ru">Кант, Чуйская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">SaveMoney</div>
+          <p class="en">Is it hard to manage your finances? This multifunctional website will help you allocate money according to criteria and track your balance, as well as track your expenses and income. There are unique calculators for stable repayment of loans,achieving goals,saving money and investing. You can write your next goals and desires in notes,do quick tasks,create and export reports. You also have opportunity to get in-deepth analyses of expenses and income in the form of graphs and percentages.</p>
+          <p class="ru">Сложно управлять финансами? Этот многофункциональный сайт поможет распределять деньги по категориям, следить за балансом, расходами и доходами. Есть уникальные калькуляторы для стабильного погашения кредитов, достижения целей, накоплений и инвестиций, а также заметки, быстрые задачи, отчёты и глубокая аналитика в виде графиков и процентов.</p>
+          <div class="people">
+            <span class="en"><b>Participant:</b> Malika Ismailova<br><b>Mentor:</b> Altynay Ismailova</span>
+            <span class="ru"><b>Участницы:</b> Malika Ismailova<br><b>Ментор:</b> Altynay Ismailova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/e5s-NS1XPHI?feature=shared" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Aurora Team <span class="en">Bishkek</span><span class="ru">Бишкек</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">Nomad Fest</div>
+          <p class="en">Kyrgyzstan offers a variety of festivals, local businesses, and cultural events that many independent travelers often miss. We conducted 30 in-person interviews and found that most rely on scattered and incomplete online information that fails to fully represent the richness of local culture. Our app, Nomad Fest, brings together authentic Kyrgyz experiences — festivals, small businesses, and events — in one convenient platform. Our AI assistant, Ak Sakal, shares cultural insights and ends each interaction with an eco-friendly reminder inspired by traditions. Sustainable businesses are marked with a green leaf icon, while users earn titles and track their environmental impact.</p>
+          <p class="ru">В Кыргызстане множество фестивалей, локальных бизнесов и культурных событий, о которых самостоятельные путешественники часто не знают. Nomad Fest собирает аутентичные кыргызские впечатления — фестивали, малый бизнес, события — на одной платформе, а ИИ-ассистент «Ак Сакал» делится культурными инсайтами и напоминает об экологичности. Устойчивые бизнесы отмечены специальной пометкой.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aiperi Alieva, Munara Ymamali kyzy, Sezimay Akbaraliewa, Meerim Mamatjanova, Tumar Tursunova<br><b>Mentors:</b> Natalia Mamtseva, Dilfuza Tursunbekova, Дастан Алыбеков, Aigerim Zholchubekova</span>
+            <span class="ru"><b>Участницы:</b> Aiperi Alieva, Munara Ymamali kyzy, Sezimay Akbaraliewa, Meerim Mamatjanova, Tumar Tursunova<br><b>Менторы:</b> Natalia Mamtseva, Dilfuza Tursunbekova, Дастан Алыбеков, Aigerim Zholchubekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/iadgjSX5y34?si=YoC9jiD_68CkCD9f" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">«Akyl Karachach» <span class="en">Kaji-Say, Issyk-Kul Region</span><span class="ru">Каджи-Сай, Иссык-Кульская область</span></div>
+            <span class="division senior">Senior</span>
+          </div>
+          <div class="appname">At home</div>
+          <p class="en">Our project is a mobile app designed to solve a real-life problem by providing users with simple, accessible tools and information. The app helps users make better decisions through an easy-to-use interface and practical features tailored to their needs. We focused on creating a solution that is user-friendly, efficient, and impactful. By combining research, creativity, and technology, our project aims to improve everyday life and make a positive difference in our community.</p>
+          <p class="ru">Мобильное приложение, которое решает повседневные задачи, давая пользователям простые и доступные инструменты и информацию. Понятный интерфейс и практичные функции помогают принимать более удачные решения и делают повседневную жизнь проще и лучше.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Aigerim Karypbaeva, Малика Медетканова, Мээрим Эркимбекова, Maryam Kumargazieva, Kubanychbekova Akmaral<br><b>Mentor:</b> Aigerim Zholchubekova</span>
+            <span class="ru"><b>Участницы:</b> Aigerim Karypbaeva, Малика Медетканова, Мээрим Эркимбекова, Maryam Kumargazieva, Kubanychbekova Akmaral<br><b>Ментор:</b> Aigerim Zholchubekova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/nr74S9ki_kY?si=I6LacRCfvYHlI-ag" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">Chkalov Girls <span class="en">Naryn, Naryn Region</span><span class="ru">Нарын, Нарынская область</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Naryn Master</div>
+          <p class="en">Our platform is dedicated to tackling unemployment in the town of Naryn, Kyrgyzstan. Through our website, clients can easily find local skilled professionals, or craftsmen can showcase their services to reach new customers…</p>
+          <p class="ru">Платформа против безработицы в городе Нарын: через наш сайт клиенты легко находят местных мастеров и специалистов, а мастера показывают свои услуги и получают новых заказчиков.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Ainazik Mamatkulova, Aisuikum Kargaldaeva, Rayana Turusbekova<br><b>Mentor:</b> Symbat Maademilova</span>
+            <span class="ru"><b>Участницы:</b> Ainazik Mamatkulova, Aisuikum Kargaldaeva, Rayana Turusbekova<br><b>Ментор:</b> Symbat Maademilova</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/LHyQJC3zlGY?si=LcU_nPBCQV2JFM3_" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="team">A knowledge hub <span class="en">Osh</span><span class="ru">Ош</span></div>
+            <span class="division junior">Junior</span>
+          </div>
+          <div class="appname">Real Expense Tracker</div>
+          <p class="en">Real Expense Tracker Very simple: • &quot;Spent 200 som - food&quot; • &quot;Received 500 som — from parents&quot; The app: • shows where your money goes • gives insights (for example: &quot;40% of your spending is on fast food») A simple tool where users log their real-life income and expenses. The app then analyzes their spending habits, shows where their money goes, and provides useful insights — helping them become more aware and make smarter financial decisions.</p>
+          <p class="ru">Простой инструмент учёта реальных доходов и расходов: «Потратила 200 сомов — еда», «Получила 500 сомов — от родителей». Приложение анализирует привычки трат, показывает, куда уходят деньги, и даёт полезные инсайты (например: «40% расходов — фастфуд»), помогая принимать более осознанные финансовые решения.</p>
+          <div class="people">
+            <span class="en"><b>Participants:</b> Meerim Abdykaimova, Diyora Fazylova, Azimay Karimova, Ildana Ahmetova<br><b>Mentor:</b> Zhyrgal Botobaeva</span>
+            <span class="ru"><b>Участницы:</b> Meerim Abdykaimova, Diyora Fazylova, Azimay Karimova, Ildana Ahmetova<br><b>Ментор:</b> Zhyrgal Botobaeva</span>
+          </div>
+          <a class="video-link" href="https://youtu.be/7ovgajyR6sE?si=LymyNXzk7H0R7Pqc" target="_blank" rel="noopener">▶ <span class="en">Watch pitch video</span><span class="ru">Смотреть питч-видео</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div>
+        <span class="en">Technovation in Kyrgyzstan is a program of TECHAIM Public Foundation, Bishkek.</span>
+        <span class="ru">Technovation в Кыргызстане — программа Общественного фонда «Тэкайым», Бишкек.</span><br>
+        © 2017–2026 TECHAIM Public Foundation
+      </div>
+      <div>
+        <a href="index.html"><span class="en">← Back to main page</span><span class="ru">← На главную</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+      try { localStorage.setItem('tg-lang', lang); } catch (e) {}
+    }
+    try {
+      var saved = localStorage.getItem('tg-lang');
+      if (saved === 'ru' || saved === 'en') setLang(saved);
+    } catch (e) {}
+  </script>
+</body>
+</html>
