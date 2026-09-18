@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About TECHAIM Public Foundation | Girls in STEAM Kyrgyzstan</title>
+  <meta name="description" content="About TECHAIM Public Foundation — a registered nonprofit in Kyrgyzstan empowering girls and women through STEAM education, mentorship and innovation since 2019." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #ff6b2b;
+      --orange-soft: #fff0e8;
+      --blue: #1a7fd4;
+      --blue-dark: #0d5fa0;
+      --blue-ink: #12263a;
+      --violet: #6952d7;
+      --turquoise: #21b7b6;
+      --yellow: #ffb800;
+      --white: #ffffff;
+      --gray: #5e7a8a;
+      --gray-light: #f4f8fc;
+      --line: rgba(18, 38, 58, 0.1);
+      --shadow: 0 22px 60px rgba(13, 95, 160, 0.13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--blue-ink); background: var(--white); font-family: "Manrope", sans-serif; overflow-x: hidden; }
+    a { color: inherit; }
+
+    /* topbar */
+    .topbar {
+      position: fixed; inset: 0 0 auto; z-index: 100; min-height: 74px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      padding: 12px clamp(18px, 4vw, 54px);
+      background: rgba(255,255,255,0.94); backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(26,127,212,0.12);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark img { height: 44px; width: auto; display: block; }
+    .navlinks { display: flex; align-items: center; gap: 18px; font-size: 13px; font-weight: 800; color: #375164; }
+    .navlinks a { text-decoration: none; white-space: nowrap; }
+    .navlinks a:hover { color: var(--blue); }
+    .navlinks a.active { color: var(--orange); }
+    .lang-toggle {
+      display: grid; grid-template-columns: 1fr 1fr; width: 88px; padding: 3px;
+      background: var(--gray-light); border: 1px solid var(--line); border-radius: 999px;
+    }
+    .lang-toggle button {
+      border: 0; border-radius: 999px; background: transparent; color: var(--gray);
+      padding: 7px 0; font-size: 12px; font-weight: 900; cursor: pointer;
+    }
+    .lang-toggle button.active { background: var(--blue); color: white; }
+    @media (max-width: 768px) { .navlinks { display: none; } }
+
+    /* layout */
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 54px); }
+    section { padding: clamp(48px, 7vw, 88px) 0; }
+
+    /* hero */
+    .hero {
+      padding: calc(74px + 56px) 0 56px;
+      background: linear-gradient(135deg, #0d5fa0 0%, #1a7fd4 50%, #6952d7 100%);
+      color: white;
+    }
+    .hero h1 { font-family: "Montserrat", sans-serif; font-size: clamp(28px, 5vw, 52px); font-weight: 900; margin: 0 0 16px; line-height: 1.1; }
+    .hero p { font-size: clamp(15px, 1.8vw, 18px); color: rgba(255,255,255,.82); max-width: 680px; line-height: 1.65; margin: 0 0 12px; }
+    .reg-badge {
+      display: inline-block; margin-top: 20px; padding: 10px 18px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 10px; font-size: 13px; color: rgba(255,255,255,.9); line-height: 1.6;
+    }
+    .reg-badge strong { color: white; }
+
+    /* cards */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 32px; }
+    .card {
+      background: var(--gray-light); border-radius: 16px;
+      padding: clamp(20px, 3vw, 32px); border: 1px solid var(--line);
+    }
+    .card h3 { font-family: "Montserrat", sans-serif; font-size: 17px; font-weight: 900; margin: 0 0 10px; }
+    .card p { color: var(--gray); font-size: 14px; line-height: 1.65; margin: 0; }
+    .card .icon { font-size: 28px; margin-bottom: 12px; }
+
+    /* section headings */
+    .label {
+      display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+    }
+    h2 { font-family: "Montserrat", sans-serif; font-size: clamp(22px, 3vw, 36px); font-weight: 900; margin: 0 0 16px; line-height: 1.15; }
+    .section-copy { color: var(--gray); font-size: clamp(14px, 1.5vw, 17px); line-height: 1.7; max-width: 760px; margin: 0 0 24px; }
+
+    /* stats strip */
+    .stats-strip {
+      background: var(--blue-ink); color: white;
+      padding: clamp(32px, 5vw, 56px) 0;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 24px; text-align: center; }
+    .stat-val { font-family: "Montserrat", sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--orange); display: block; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,.65); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; display: block; }
+
+    /* partners */
+    .partner-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .partner-tag {
+      padding: 8px 16px; border-radius: 999px;
+      background: var(--orange-soft); color: var(--blue-dark);
+      font-size: 13px; font-weight: 700;
+    }
+
+    /* registration section */
+    .reg-section {
+      background: var(--gray-light); border-left: 4px solid var(--orange);
+      border-radius: 0 12px 12px 0; padding: 20px 24px; margin-top: 32px;
+    }
+    .reg-section h3 { font-family: "Montserrat", sans-serif; font-size: 15px; font-weight: 900; margin: 0 0 8px; }
+    .reg-section p { font-size: 13px; color: var(--gray); margin: 0; line-height: 1.8; }
+    .reg-section strong { color: var(--blue-ink); }
+
+    /* timeline */
+    .timeline { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+    .timeline-item { display: flex; gap: 16px; align-items: flex-start; }
+    .timeline-year {
+      min-width: 52px; font-family: "Montserrat", sans-serif;
+      font-size: 13px; font-weight: 900; color: var(--orange);
+      padding-top: 2px;
+    }
+    .timeline-text { font-size: 14px; color: var(--gray); line-height: 1.6; border-left: 2px solid var(--line); padding-left: 16px; }
+
+    /* footer */
+    .footer {
+      background: var(--blue-ink); color: rgba(255,255,255,.6);
+      padding: 28px clamp(18px, 4vw, 54px); font-size: 13px;
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;
+    }
+    .footer a { color: rgba(255,255,255,.6); text-decoration: none; }
+    .footer a:hover { color: white; }
+    .footer strong { color: white; }
+
+    [data-lang] { display: none; }
+    body.en [data-lang="en"] { display: block; }
+    body.ru [data-lang="ru"] { display: block; }
+    span[data-lang] { display: none; }
+    body.en span[data-lang="en"] { display: inline; }
+    body.ru span[data-lang="ru"] { display: inline; }
+  </style>
+</head>
+<body class="en">
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">
+      <img src="techaim-logo.png" alt="TECHAIM" onerror="this.style.display='none'" />
+    </div>
+    <strong style="font-family:'Montserrat',sans-serif;font-size:15px;color:var(--blue-ink);">TECHAIM</strong>
+  </a>
+  <nav class="navlinks">
+    <a href="about.html" class="active" data-lang="en">About</a><a href="about.html" class="active" data-lang="ru">О фонде</a>
+    <a href="index.html#work" data-lang="en">Services</a><a href="index.html#work" data-lang="ru">Услуги</a>
+    <a href="technovation_project_about.html" data-lang="en">Projects</a><a href="technovation_project_about.html" data-lang="ru">Проекты</a>
+    <a href="index.html#impact" data-lang="en">Impact</a><a href="index.html#impact" data-lang="ru">Вклад</a>
+    <a href="index.html#partners" data-lang="en">For Partners</a><a href="index.html#partners" data-lang="ru">Партнерам</a>
+    <a href="contact.html" data-lang="en">Contact</a><a href="contact.html" data-lang="ru">Контакты</a>
+  </nav>
+  <div class="lang-toggle">
+    <button data-set-lang="en">EN</button>
+    <button data-set-lang="ru">RU</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p data-lang="en" style="font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px;">About TECHAIM</p>
+      <p data-lang="ru" style="font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px;">О фонде</p>
+      <h1 data-lang="en">Founded by women.<br>Led by women.<br>Built for girls.</h1>
+      <h1 data-lang="ru">Основан женщинами.<br>Управляется женщинами.<br>Создан для девочек.</h1>
+      <p data-lang="en">TECHAIM Public Foundation is Kyrgyzstan's leading nonprofit dedicated to closing the gender gap in technology and science. Since 2019, we have run 30+ programs across all 7 regions, reaching 13,000+ girls and women through STEAM education, mentorship, and innovation.</p>
+      <p data-lang="ru">ОФ «Тэкайым» — ведущая некоммерческая организация Кыргызстана, посвящённая устранению гендерного разрыва в технологиях и науке. С 2019 года мы реализовали 30+ программ во всех 7 регионах, охватив 13 000+ девочек и женщин через образование в области STEAM, менторство и инновации.</p>
+      <div class="reg-badge">
+        <span data-lang="en">
+          <strong>Registered Nonprofit Organization</strong><br>
+          TECHAIM Public Foundation · Registration No: <strong>186638-3301-ОФ</strong><br>
+          Ministry of Justice of the Kyrgyz Republic · Registered 2019
+        </span>
+        <span data-lang="ru">
+          <strong>Зарегистрированная некоммерческая организация</strong><br>
+          ОФ «Тэкайым» · Регистрационный номер: <strong>186638-3301-ОФ</strong><br>
+          Министерство юстиции Кыргызской Республики · Зарегистрирована в 2019 г.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div><span class="stat-val">13,000+</span><span class="stat-label" data-lang="en">Girls & Women Reached</span><span class="stat-label" data-lang="ru">Девочек и женщин охвачено</span></div>
+        <div><span class="stat-val">30+</span><span class="stat-label" data-lang="en">Programs Completed</span><span class="stat-label" data-lang="ru">Программ реализовано</span></div>
+        <div><span class="stat-val">900+</span><span class="stat-label" data-lang="en">Mentors Engaged</span><span class="stat-label" data-lang="ru">Менторов вовлечено</span></div>
+        <div><span class="stat-val">7</span><span class="stat-label" data-lang="en">Regions of Kyrgyzstan</span><span class="stat-label" data-lang="ru">Регионов Кыргызстана</span></div>
+        <div><span class="stat-val">$623K</span><span class="stat-label" data-lang="en">Grants Raised</span><span class="stat-label" data-lang="ru">Грантов привлечено</span></div>
+        <div><span class="stat-val">2030</span><span class="stat-label" data-lang="en">Vision: 100K Women in STEAM</span><span class="stat-label" data-lang="ru">Цель: 100 000 женщин в STEAM</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION VISION AIM -->
+  <section>
+    <div class="wrap">
+      <span class="label" data-lang="en">Who We Are</span><span class="label" data-lang="ru">Кто мы</span>
+      <h2 data-lang="en">A national foundation for girls in STEAM.</h2>
+      <h2 data-lang="ru">Национальный фонд для девочек в STEAM.</h2>
+      <p class="section-copy" data-lang="en">We started in 2019 as a community of girls passionate about STEM and education — and grew into a national foundation of STEM and education leaders. Today we are the official Kyrgyzstan representative of Technovation Girls and Khan Academy, with partnerships spanning UNICEF, World Bank, the U.S. Embassy, EPAM Systems, Oracle, Beeline, Mega and KyrgyzPatent.</p>
+      <p class="section-copy" data-lang="ru">Мы начинали в 2019 году как сообщество девушек, увлечённых STEM и образованием — и выросли в национальный фонд лидеров. Сегодня мы — официальный представитель Technovation Girls и Khan Academy в Кыргызстане, с партнёрствами ЮНИСЕФ, Всемирного банка, Посольства США, EPAM Systems, Oracle, Beeline, Mega и КыргызПатента.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3 data-lang="en">Mission</h3><h3 data-lang="ru">Миссия</h3>
+          <p data-lang="en">To inspire girls and young women through education and innovation in IT and STEAM — providing them with the knowledge, skills, and support to realise their potential.</p>
+          <p data-lang="ru">Вдохновлять девушек и молодых женщин через образование и инновации в IT и STEAM — давая им знания, навыки и поддержку для реализации потенциала.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔭</div>
+          <h3 data-lang="en">Vision</h3><h3 data-lang="ru">Видение</h3>
+          <p data-lang="en">The leading organisation in Kyrgyzstan by 2030, providing 100,000 women with careers in IT and STEAM, creating a favourable environment for all youth.</p>
+          <p data-lang="ru">Ведущая организация Кыргызстана к 2030 году — 100 000 женщин с карьерой в IT и STEAM, благоприятная среда для всей молодёжи.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🚀</div>
+          <h3 data-lang="en">Aim</h3><h3 data-lang="ru">Цель</h3>
+          <p data-lang="en">Expand rights and opportunities of girls and young women through quality IT and STEAM education, mentorship, and startup support — fostering professional and personal growth.</p>
+          <p data-lang="ru">Расширять права и возможности девушек через качественное IT- и STEAM-образование, менторство и поддержку стартапов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY TIMELINE -->
+  <section style="background:var(--gray-light);">
+    <div class="wrap">
+      <span class="label" data-lang="en">Our Story</span><span class="label" data-lang="ru">Наша история</span>
+      <h2 data-lang="en">7 years building Kyrgyzstan's STEAM community.</h2>
+      <h2 data-lang="ru">7 лет строим STEAM-сообщество Кыргызстана.</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-text" data-lang="en">Launched Technovation Girls Kyrgyzstan — first STEM program for girls in the country.</div>
+          <div class="timeline-text" data-lang="ru">Запустили Technovation Girls Кыргызстан — первую STEM-программу для девочек в стране.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-text" data-lang="en">Founded TECHAIM Public Foundation. Registered with the Ministry of Justice of the Kyrgyz Republic (No: 186638-3301-ОФ).</div>
+          <div class="timeline-text" data-lang="ru">Основан ОФ «Тэкайым». Зарегистрирован Министерством юстиции Кыргызской Республики (№ 186638-3301-ОФ).</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-text" data-lang="en">Partnership with UNICEF, US Embassy. Expanded to all 7 regions of Kyrgyzstan.</div>
+          <div class="timeline-text" data-lang="ru">Партнёрство с ЮНИСЕФ, Посольством США. Расширились на все 7 регионов Кыргызстана.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-text" data-lang="en">Became official Khan Academy partner. Launched Women in Tech professional program.</div>
+          <div class="timeline-text" data-lang="ru">Стали официальным партнёром Khan Academy. Запустили профессиональную программу Women in Tech.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-text" data-lang="en">Reached 13,000+ beneficiaries. $623K in total grants raised. 900+ mentors across programs.</div>
+          <div class="timeline-text" data-lang="ru">Охватили 13 000+ участниц. Привлекли $623 000 грантов. 900+ менторов в программах.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2030</div>
+          <div class="timeline-text" data-lang="en">Goal: 100,000 girls and women in STEAM in Kyrgyzstan.</div>
+          <div class="timeline-text" data-lang="ru">Цель: 100 000 девочек и женщин в STEAM в Кыргызстане.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section>
+    <div class="wrap">
+      <span class="label" data-lang="en">Our Partners</span><span class="label" data-lang="ru">Наши партнёры</span>
+      <h2 data-lang="en">Trusted by leading international organizations.</h2>
+      <h2 data-lang="ru">Нам доверяют ведущие международные организации.</h2>
+      <div class="partner-list">
+        <span class="partner-tag">UNICEF</span>
+        <span class="partner-tag">World Bank</span>
+        <span class="partner-tag">U.S. Embassy Bishkek</span>
+        <span class="partner-tag">UN Women</span>
+        <span class="partner-tag">Technovation Girls</span>
+        <span class="partner-tag">Khan Academy</span>
+        <span class="partner-tag">EPAM Systems</span>
+        <span class="partner-tag">Oracle</span>
+        <span class="partner-tag">Beeline Kyrgyzstan</span>
+        <span class="partner-tag">Mega</span>
+        <span class="partner-tag">KyrgyzPatent</span>
+        <span class="partner-tag">Ministry of Education KR</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL REGISTRATION -->
+  <section style="background:var(--gray-light);">
+    <div class="wrap">
+      <span class="label" data-lang="en">Legal Information</span><span class="label" data-lang="ru">Юридическая информация</span>
+      <h2 data-lang="en">Registered Nonprofit Organization.</h2>
+      <h2 data-lang="ru">Зарегистрированная некоммерческая организация.</h2>
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="card">
+          <h3 data-lang="en">Organization</h3><h3 data-lang="ru">Организация</h3>
+          <p data-lang="en">TECHAIM Public Foundation<br><em>ОФ «Тэкайым»</em></p>
+          <p data-lang="ru">ОФ «Тэкайым»<br><em>TECHAIM Public Foundation</em></p>
+        </div>
+        <div class="card">
+          <h3 data-lang="en">Registration No.</h3><h3 data-lang="ru">Рег. номер</h3>
+          <p><strong style="color:var(--orange);font-size:16px;">186638-3301-ОФ</strong></p>
+        </div>
+        <div class="card">
+          <h3 data-lang="en">Registered With</h3><h3 data-lang="ru">Зарегистрирован</h3>
+          <p data-lang="en">Ministry of Justice of the Kyrgyz Republic</p>
+          <p data-lang="ru">Министерство юстиции Кыргызской Республики</p>
+        </div>
+        <div class="card">
+          <h3 data-lang="en">Year Founded</h3><h3 data-lang="ru">Год основания</h3>
+          <p>2019</p>
+        </div>
+        <div class="card">
+          <h3 data-lang="en">Address</h3><h3 data-lang="ru">Адрес</h3>
+          <p data-lang="en">Chui Prospect, 120, office 323<br>Bishkek, Kyrgyzstan 720000</p>
+          <p data-lang="ru">просп. Чуй, 120, кабинет 323<br>г. Бишкек, Кыргызстан 720000</p>
+        </div>
+        <div class="card">
+          <h3 data-lang="en">Contact</h3><h3 data-lang="ru">Контакты</h3>
+          <p><a href="mailto:techaim@techaim.org" style="color:var(--blue);font-weight:700;">techaim@techaim.org</a><br>
+          <a href="tel:+996550976197" style="color:var(--blue);font-weight:700;">+996 550 976-197</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>
+    <strong>© 2026 TECHAIM Public Foundation / ОФ «Тэкайым»</strong><br>
+    <span data-lang="en">Registration No: 186638-3301-ОФ · Ministry of Justice of the Kyrgyz Republic</span>
+    <span data-lang="ru">Рег. номер: 186638-3301-ОФ · Министерство юстиции Кыргызской Республики</span>
+  </div>
+  <div>
+    <a href="mailto:techaim@techaim.org">techaim@techaim.org</a> ·
+    <a href="tel:+996550976197">+996 550 976-197</a> ·
+    <a href="https://www.instagram.com/techaim.kg/" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="https://www.facebook.com/techaim.kg" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll("[data-set-lang]");
+  function setLang(lang) {
+    document.body.className = lang;
+    buttons.forEach(b => b.classList.toggle("active", b.dataset.setLang === lang));
+    localStorage.setItem("techaim-lang", lang);
+  }
+  buttons.forEach(b => b.addEventListener("click", () => setLang(b.dataset.setLang)));
+  setLang(localStorage.getItem("techaim-lang") || "en");
+</script>
+</body>
+</html>
